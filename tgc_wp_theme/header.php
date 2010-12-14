@@ -16,8 +16,5 @@
                 </div>
             </div>
         </div>
-        <div class="interior">
-            <div class="versionBeta ">Version Beta</div>
-        </div>
 
 

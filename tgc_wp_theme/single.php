@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="cuerpo" class="exterior clearfix">
-    <div class="interior">
+    <div class="interior clearfix">
         <?php the_post(); ?>
 
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 <div id="cuerpo" class="exterior clearfix">
-
-
-
-    <div class="interior">
+    <div class="interior clearfix clearfix">
         <div id="tarjeta" class="izq">
             <div class="allIzq">
                 <span class="imgHeart"></span>

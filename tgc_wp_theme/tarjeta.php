@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="cuerpo" class="exterior clearfix">
-    <div class="interior">
+    <div class="interior clearfix">
         <div id="tarjeta" class="izq">
             <h3><?php tgc_numero_targeta() ?></h3>
             <div id="historias">

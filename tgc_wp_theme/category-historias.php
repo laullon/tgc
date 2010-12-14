@@ -4,7 +4,7 @@ $i = 0;
 $class = array("der", "izq");
 ?>
 <div id="cuerpo" class="exterior clearfix">
-    <div class="interior">
+    <div class="interior clearfix">
         <div id="historias" class="clearfix">
             <?php while (have_posts ()) : the_post();
                 $i = 1 - $i ?>

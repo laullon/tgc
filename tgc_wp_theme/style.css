@@ -13,15 +13,8 @@ License URI:
     margin: 0px !important;
 }
 
-.versionBeta {
+#cuerpo  .interior{
     background: url(images/versionbeta.png) no-repeat scroll top right;
-    width: 80px;
-    height: 54px;
-    float: right;
-    text-indent: -9999px;
-}
-
-#cuerpo {
     padding-bottom: 20px;
     padding-top: 20px;
 }

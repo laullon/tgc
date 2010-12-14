@@ -1,5 +1,5 @@
 <div id="footer" class="exterior clearfix">
-    <div class="interior">
+    <div class="interior clearfix">
         <div id="menu-footer" class="clearfix">
             <h1>THEGOODCHAIN</h1>
             <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
