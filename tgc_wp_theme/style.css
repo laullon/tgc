@@ -1,5 +1,3 @@
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
 /*
 Theme Name: The Good Chain
 Theme URI: http://thegoodchain.org/
@@ -10,218 +8,196 @@ License:
 License URI:
 */
 
-/*BY BORJA*/
-
-.submenu a
-{
+.submenu a {
     padding: 0px !important;
-	margin: 0px !important;
+    margin: 0px !important;
 }
 
-
-
-.versionBeta
-{
-	margin-left: 900px;
-	background: url(images/versionbeta.png) no-repeat scroll top right;
-	width: 80px;
-	height: 54px
+.versionBeta {
+    background: url(images/versionbeta.png) no-repeat scroll top right;
+    width: 80px;
+    height: 54px;
+    float: right;
+    text-indent: -9999px;
 }
 
-#cuerpo
-{
-	padding-bottom: 20px;
-}
-div.allIzq
-{
-	text-align: center;
-}
-body.home .imgHeart
-{
-	background: #ffffff url(images/corazongde.png) no-repeat left center;
-	display: block;
-	width: 255px;
-	height: 226px;
-	margin: 0 0 40px 110px;
-	
+#cuerpo {
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-body.home h3.textCard
-{
-	color: #175451;
-	font-size: 30px;
-	font-weight: bold;
-	margin: 5px 0 5px 0;
-}
-body.home p.codeCard
-{
-	color: #175451;
-	margin: 5px 0 5px 0;
-}
-body.home .textBoxCard
-{
-	font-size: 26px;
-	width: 300px;
-	height: 50px;
-	margin: 5px 0 5px 5px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
-	border-color: #DADADA #DADADA #DADADA #DADADA;
-	border-style:solid;
-	padding: 0 10px;
+div.allIzq {
+    text-align: center;
 }
 
-body.home div.allDer
-{
-	margin-left: 25px;
+body.home .imgHeart {
+    background: #ffffff url(images/corazongde.png) no-repeat left center;
+    display: block;
+    width: 255px;
+    height: 226px;
+    margin: 0 0 40px 110px;
 }
 
-body.home h3.textSencillo
-{
-	font-size: 24px;
-	margin: 0px;
+body.home h3.textCard {
+    color: #175451;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
 }
-body.home ul.bulletsCard
-{
-	margin: 0 0 0 5px;
+
+body.home p.codeCard {
+    color: #175451;
+    margin: 5px 0 5px 0;
+}
+
+body.home .textBoxCard {
+    font-size: 26px;
+    width: 300px;
+    height: 50px;
+    margin: 5px 0 5px 5px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    padding: 0 10px;
+}
+
+body.home div.allDer {
+    margin-left: 25px;
+}
+
+body.home h3.textSencillo {
+    font-size: 24px;
+    margin: 0px;
+}
+
+body.home ul.bulletsCard {
+    margin: 0 0 0 5px;
     padding: 0 0 0 8px;
 }
-body.home li.bullIntCard
-{
-	margin: 0 0 0 4px;
-	font-size: 18px;
-}
-body.home div.textAccion
-{
-	width: 425px;
-	margin: 15px 0 0 0;
-}
-body.home p.textAccion1
-{
-	color: #175451;
-	font-size: 36px;
-	margin: 0px;
-	text-align: justify
-}
-body.home p.textAccion2
-{
-	color: #175451;
-	margin: 0px;
-	font-size: 26px;
-	text-align: justify
-}
-body.home p.usuCadena
-{
-	font-size: 20px;
-	margin: 15px 0 5px 0;
+
+body.home li.bullIntCard {
+    margin: 0 0 0 4px;
+    font-size: 18px;
 }
 
-body.home div.partInt
-{
-	width:100%;
-	margin: 0 0 5px 0;
-}
-body.home div.partIntIzq
-{
-	float:left;
-	width: 48%;
-}
-body.home p.boxCard
-{
-	font-size: 18px;
-	margin: 5px 0 5px 0;
+body.home div.textAccion {
+    width: 425px;
+    margin: 15px 0 0 0;
 }
 
-body.home div.partIntDer
-{
-	float:right;
-	width: 48%;
+body.home p.textAccion1 {
+    color: #175451;
+    font-size: 34px;
+    margin: 0px;
+    text-align: justify
 }
 
-body.home div.partIntBottom
-{
-	width: 100%;
-	float: left;
-	margin: 15px 0 0 0;
-}
-body.home p.boxCard2
-{
-	float: left;
-	font-size: 18px;
-	margin: 5px 0 5px 0;
-}
-body.home .boxNaCla
-{
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	border-color: #DADADA #DADADA #DADADA #DADADA;
-	border-style:solid;
-	border-width: 1px;
-	padding: 0 5px;
-	height: 20px;
+body.home p.textAccion2 {
+    color: #175451;
+    margin: 0px;
+    font-size: 26px;
+    text-align: justify
 }
 
-body.home .boxNaCla2
-{
-	margin: 5px 0 0 74px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	border-color: #DADADA #DADADA #DADADA #DADADA;
-	border-style: solid;
-	border-width: 1px;
-	padding: 0 5px;
-	height: 20px;
-}
-body.home div.partIntBottom1
-{
-	margin: 10px 0 0 0;
-	float: left;
+body.home p.usuCadena {
+    font-size: 20px;
+    margin: 15px 0 5px 0;
 }
 
-body.home div.partIntBottom2
-{
-	margin: 30px 0 0 0;
-	float: left;
-}
-body.home a.greentextCardIzq
-{
-	color: #7CFC00;
-	font-size: 18px;
-	text-decoration: none;
-	font-weight: bold;
+body.home div.partInt {
+    width: 100%;
+    margin: 0 0 5px 0;
 }
 
-body.home a.greentextCardDer
-{
-	color: #7CFC00;
-	font-size: 18px;
-	text-decoration: none;
-	font-weight: bold;
-	margin: 0 0 0 54px;
+body.home div.partIntIzq {
+    float: left;
+    width: 48%;
 }
 
-
-
-body.home div.copyrightFooter
-{
-	color: #999999;
-	font-size: 12px;
-	float: left;
-	margin: 5px 0 0 351px;
-	
+body.home p.boxCard {
+    font-size: 18px;
+    margin: 5px 0 5px 0;
 }
 
-body.home div.izq
-{
-	float: left;
-	border-right: 2px solid #DADADA;
-	padding: 2px 0 0 0px;
+body.home div.partIntDer {
+    float: right;
+    width: 48%;
 }
 
-/*---------------------------*/
+body.home div.partIntBottom {
+    width: 100%;
+    float: left;
+    margin: 15px 0 0 0;
+}
+
+body.home p.boxCard2 {
+    float: left;
+    font-size: 18px;
+    margin: 5px 0 5px 0;
+}
+
+body.home .boxNaCla {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0 5px;
+    height: 20px;
+}
+
+body.home .boxNaCla2 {
+    margin: 5px 0 0 74px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0 5px;
+    height: 20px;
+}
+
+body.home div.partIntBottom1 {
+    margin: 10px 0 0 0;
+    float: left;
+}
+
+body.home div.partIntBottom2 {
+    margin: 30px 0 0 0;
+    float: left;
+}
+
+body.home a.greentextCardIzq {
+    color: #7CFC00;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.home a.greentextCardDer {
+    color: #7CFC00;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0 0 54px;
+}
+
+div.copyrightFooter {
+    color: #999999;
+    font-size: 12px;
+    float: left;
+    margin: 5px 0 0 351px;
+}
+
+body.home div.izq {
+    float: left;
+    border-right: 2px solid #DADADA;
+    padding: 2px 0 0 0px;
+}
 
 .clearfix:after {
     visibility: hidden;
@@ -231,214 +207,231 @@ body.home div.izq
     clear: both;
     height: 0;
 }
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block;}
-/* close commented backslash hack */
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
 
 body {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .exterior {
-	width: 100%;
+    width: 100%;
 }
 
 #header.exterior {
-	background-color: black;
+    background-color: black;
 }
 
 #footer.exterior {
-	background-color: #D1D9CC;
-	padding-top: 5px;
-	padding-bottom: 5px;
+    background-color: #D1D9CC;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #header div.interior {
-	color: white;
-	padding-top: 5px;
-	padding-bottom: 5px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.interior{
-	width: 960px;
-	margin: auto;
+.interior {
+    width: 960px;
+    margin: auto;
 }
 
 div.izq,div.der {
-	width: 48%;
+    width: 48%;
 }
-div.izq{
-	float: left;
-	padding: 2px 0 0 0px;
+
+div.izq {
+    float: left;
+    padding: 2px 0 0 0px;
 }
-div.der{
-	float: right;
-	padding: 2px 0 0 0px;
+
+div.der {
+    float: right;
+    padding: 2px 0 0 0px;
 }
 
 #menu-footer h1 {
-	font-size: 1.5em;
-	float: left;
-	margin: 0 10px 0 0;
+    font-size: 1.5em;
+    float: left;
+    margin: 0 10px 0 0;
 }
 
-#menu-footer ul li{
-	display: inline;
-	list-style-type: none;
+#menu-footer ul li {
+    display: inline;
+    list-style-type: none;
 }
 
 div#info {
-	float: left;
-	width: 560px;
+    float: left;
+    width: 560px;
 }
 
 div#social {
-	float: right;
-	width: 380px;
+    float: right;
+    width: 380px;
 }
 
-
-/* MENU */
 .sf-menu, .sf-menu * {
-    margin:         0;
-    padding:        0;
-    list-style:     none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
 .sf-menu {
-    line-height:    1.0;
+    line-height: 1.0;
 }
+
 .sf-menu ul {
-    position:       absolute;
-    top:            -999em;
-    width:          10em; /* left offset of submenus need to match (see below) */
+    position: absolute;
+    top: -999em;
+    width: 10em;
 }
+
 .sf-menu ul li {
-    width:          100%;
+    width: 100%;
 }
+
 .sf-menu li:hover {
-    visibility:     inherit; /* fixes IE7 'sticky bug' */
+    visibility: inherit;
 }
+
 .sf-menu li {
-    float:          left;
-    position:       relative;
+    float: left;
+    position: relative;
 }
+
 .sf-menu a {
-    display:        block;
-    position:       relative;
+    display: block;
+    position: relative;
 }
+
 .sf-menu li:hover ul,
 .sf-menu li.sfHover ul {
-    left:           0;
-    top:            2.5em; /* match top ul list item height */
-    z-index:        99;
+    left: 0;
+    top: 30px;
+    z-index: 99;
 }
+
 ul.sf-menu li:hover li ul,
 ul.sf-menu li.sfHover li ul {
-    top:            -999em;
+    top: -999em;
 }
+
 ul.sf-menu li li:hover ul,
 ul.sf-menu li li.sfHover ul {
-    left:           10em; /* match ul width */
-    top:            0;
+    left: 10em;
+    top: 0;
 }
+
 ul.sf-menu li li:hover li ul,
 ul.sf-menu li li.sfHover li ul {
-    top:            -999em;
+    top: -999em;
 }
+
 ul.sf-menu li li li:hover ul,
 ul.sf-menu li li li.sfHover ul {
-    left:           10em; /* match ul width */
-    top:            0;
+    left: 10em;
+    top: 0;
 }
 
-/*** DEMO SKIN ***/
 .sf-menu {
-    float:          left;
+    float: left;
 }
+
 .sf-menu a {
-    border-left:    1px solid #fff;
-    text-decoration:none;
-	padding: 5px 10px;
-}
-/*Quitamos el borde de la izquierda la primer elemento*/
-.sf-menu li:first-child a
-{
-	border: none;
+    border-left: 1px solid #fff;
+    text-decoration: none;
+    padding: 5px 10px;
 }
 
-
-
-.sf-menu a, .sf-menu a:visited  {
-	color: #DADADA;
+.sf-menu li:first-child a {
+    border: none;
 }
+
+.sf-menu a, .sf-menu a:visited {
+    color: #DADADA;
+}
+
 .sf-menu li {
+
 }
+
 .sf-menu li li {
+
 }
+
 .sf-menu li li li {
+
 }
+
 .sf-menu li:hover, .sf-menu li.sfHover,
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
-    outline:        0;
+    outline: 0;
 }
 
-/*** arrows **/
 .sf-menu a.sf-with-ul {
-    padding-right:  2.25em;
-    min-width:      1px; /* trigger IE7 hasLayout so spans position accurately */
+    padding-right: 2.25em;
+    min-width: 1px;
 }
+
 .sf-sub-indicator {
-    position:       absolute;
-    display:        block;
-    right:          .75em;
-    width:          10px;
-    height:         10px;
-    text-indent:    -999em;
-    overflow:       hidden;
-    background:     url('images/arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+    position: absolute;
+    display: block;
+    right: .75em;
+    width: 10px;
+    height: 10px;
+    text-indent: -999em;
+    overflow: hidden;
+    background: url('images/arrows-ffffff.png') no-repeat -10px -100px;
 }
-a > .sf-sub-indicator {  /* give all except IE6 the correct values */
-                         top:            .8em;
-                         background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+
+a > .sf-sub-indicator {
+    top: .8em;
+    background-position: 0 -100px;
 }
-/* apply hovers to modern browsers */
+
 a:focus > .sf-sub-indicator,
 a:hover > .sf-sub-indicator,
 a:active > .sf-sub-indicator,
 li:hover > a > .sf-sub-indicator,
 li.sfHover > a > .sf-sub-indicator {
-    background-position: -10px -100px; /* arrow hovers for modern browsers*/
+    background-position: -10px -100px;
 }
 
-/* point right for anchors in subs */
-.sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
-.sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
-/* apply hovers to modern browsers */
+.sf-menu ul .sf-sub-indicator {
+    background-position: -10px 0;
+}
+
+.sf-menu ul a > .sf-sub-indicator {
+    background-position: 0 0;
+}
+
 .sf-menu ul a:focus > .sf-sub-indicator,
 .sf-menu ul a:hover > .sf-sub-indicator,
 .sf-menu ul a:active > .sf-sub-indicator,
 .sf-menu ul li:hover > a > .sf-sub-indicator,
 .sf-menu ul li.sfHover > a > .sf-sub-indicator {
-    background-position: -10px 0; /* arrow hovers for modern browsers*/
+    background-position: -10px 0;
 }
 
-/*** shadows for all but IE6 ***/
 .sf-shadow ul {
-    /*background: url('images/shadow.png') no-repeat bottom right;*/
-	background-color: black;
-	padding: -5px 0 0 0;
-    /*padding: 0 8px 9px 0;
-    -moz-border-radius-bottomleft: 17px;
-    -moz-border-radius-topright: 17px;
-    -webkit-border-top-right-radius: 17px;
-    -webkit-border-bottom-left-radius: 17px;*/
+    background-color: black;
+    padding: -5px 0 0 0;
 }
-
-
-
 
 .sf-shadow ul.sf-shadow-off {
     background: transparent;

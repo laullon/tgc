@@ -12,10 +12,12 @@
         <div id="header" class="exterior">
             <div class="interior clearfix">
                 <div id="menu">
-                    <?php wp_nav_menu(array('theme_location' => 'header-menu','menu_class' => 'sf-menu')); ?>
+                    <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'sf-menu')); ?>
                 </div>
             </div>
         </div>
-		
-		<div class="versionBeta"></div>
+        <div class="interior">
+            <div class="versionBeta ">Version Beta</div>
+        </div>
+
 
