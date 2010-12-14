@@ -10,6 +10,219 @@ License:
 License URI:
 */
 
+/*BY BORJA*/
+
+.submenu a
+{
+    padding: 0px !important;
+	margin: 0px !important;
+}
+
+
+
+.versionBeta
+{
+	margin-left: 900px;
+	background: url(images/versionbeta.png) no-repeat scroll top right;
+	width: 80px;
+	height: 54px
+}
+
+#cuerpo
+{
+	padding-bottom: 20px;
+}
+div.allIzq
+{
+	text-align: center;
+}
+body.home .imgHeart
+{
+	background: #ffffff url(images/corazongde.png) no-repeat left center;
+	display: block;
+	width: 255px;
+	height: 226px;
+	margin: 0 0 40px 110px;
+	
+}
+
+body.home h3.textCard
+{
+	color: #175451;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 5px 0 5px 0;
+}
+body.home p.codeCard
+{
+	color: #175451;
+	margin: 5px 0 5px 0;
+}
+body.home .textBoxCard
+{
+	font-size: 26px;
+	width: 300px;
+	height: 50px;
+	margin: 5px 0 5px 5px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+	border-style:solid;
+	padding: 0 10px;
+}
+
+body.home div.allDer
+{
+	margin-left: 25px;
+}
+
+body.home h3.textSencillo
+{
+	font-size: 24px;
+	margin: 0px;
+}
+body.home ul.bulletsCard
+{
+	margin: 0 0 0 5px;
+    padding: 0 0 0 8px;
+}
+body.home li.bullIntCard
+{
+	margin: 0 0 0 4px;
+	font-size: 18px;
+}
+body.home div.textAccion
+{
+	width: 425px;
+	margin: 15px 0 0 0;
+}
+body.home p.textAccion1
+{
+	color: #175451;
+	font-size: 36px;
+	margin: 0px;
+	text-align: justify
+}
+body.home p.textAccion2
+{
+	color: #175451;
+	margin: 0px;
+	font-size: 26px;
+	text-align: justify
+}
+body.home p.usuCadena
+{
+	font-size: 20px;
+	margin: 15px 0 5px 0;
+}
+
+body.home div.partInt
+{
+	width:100%;
+	margin: 0 0 5px 0;
+}
+body.home div.partIntIzq
+{
+	float:left;
+	width: 48%;
+}
+body.home p.boxCard
+{
+	font-size: 18px;
+	margin: 5px 0 5px 0;
+}
+
+body.home div.partIntDer
+{
+	float:right;
+	width: 48%;
+}
+
+body.home div.partIntBottom
+{
+	width: 100%;
+	float: left;
+	margin: 15px 0 0 0;
+}
+body.home p.boxCard2
+{
+	float: left;
+	font-size: 18px;
+	margin: 5px 0 5px 0;
+}
+body.home .boxNaCla
+{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+	border-style:solid;
+	border-width: 1px;
+	padding: 0 5px;
+	height: 20px;
+}
+
+body.home .boxNaCla2
+{
+	margin: 5px 0 0 74px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0 5px;
+	height: 20px;
+}
+body.home div.partIntBottom1
+{
+	margin: 10px 0 0 0;
+	float: left;
+}
+
+body.home div.partIntBottom2
+{
+	margin: 30px 0 0 0;
+	float: left;
+}
+body.home a.greentextCardIzq
+{
+	color: #7CFC00;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+body.home a.greentextCardDer
+{
+	color: #7CFC00;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0 0 0 54px;
+}
+
+
+
+body.home div.copyrightFooter
+{
+	color: #999999;
+	font-size: 12px;
+	float: left;
+	margin: 5px 0 0 351px;
+	
+}
+
+body.home div.izq
+{
+	float: left;
+	border-right: 2px solid #DADADA;
+	padding: 2px 0 0 0px;
+}
+
+/*---------------------------*/
+
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -21,14 +234,13 @@ License URI:
 .clearfix { display: inline-block; }
 /* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
-.clearfix { display: block; }
+.clearfix { display: block;}
 /* close commented backslash hack */
 
 body {
 	padding: 0;
 	margin: 0;
 }
-
 
 .exterior {
 	width: 100%;
@@ -60,9 +272,11 @@ div.izq,div.der {
 }
 div.izq{
 	float: left;
+	padding: 2px 0 0 0px;
 }
 div.der{
 	float: right;
+	padding: 2px 0 0 0px;
 }
 
 #menu-footer h1 {
@@ -147,10 +361,18 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu a {
     border-left:    1px solid #fff;
     text-decoration:none;
-	padding: 5px;
+	padding: 5px 10px;
 }
+/*Quitamos el borde de la izquierda la primer elemento*/
+.sf-menu li:first-child a
+{
+	border: none;
+}
+
+
+
 .sf-menu a, .sf-menu a:visited  {
-	color: white;
+	color: #DADADA;
 }
 .sf-menu li {
 }
@@ -205,13 +427,19 @@ li.sfHover > a > .sf-sub-indicator {
 
 /*** shadows for all but IE6 ***/
 .sf-shadow ul {
-    background: url('images/shadow.png') no-repeat bottom right;
-    padding: 0 8px 9px 0;
+    /*background: url('images/shadow.png') no-repeat bottom right;*/
+	background-color: black;
+	padding: -5px 0 0 0;
+    /*padding: 0 8px 9px 0;
     -moz-border-radius-bottomleft: 17px;
     -moz-border-radius-topright: 17px;
     -webkit-border-top-right-radius: 17px;
-    -webkit-border-bottom-left-radius: 17px;
+    -webkit-border-bottom-left-radius: 17px;*/
 }
+
+
+
+
 .sf-shadow ul.sf-shadow-off {
     background: transparent;
 }

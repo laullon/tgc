@@ -5,6 +5,7 @@
         <title><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></title>
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
         <?php wp_head(); ?>
+		<link rel="shortcut icon" href="/wp-content/themes/tgc_wp_theme/favicon.ico"/>
     </head>
 
     <body <?php body_class(); ?>>
@@ -15,4 +16,6 @@
                 </div>
             </div>
         </div>
+		
+		<div class="versionBeta"></div>
 

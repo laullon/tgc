@@ -11,4 +11,10 @@
             <p>si te gusta el proyecto, compártelo con tus amigos</p>
         </div>
     </div>
+	
+	
+</div>
+
+<div class="copyrightFooter">
+	THE GOOD CHAIN Calle Gobernador, 26 MADRID - CIF G86049855  -  COPYRIGHT ©2010    -   AVISO LEGAL  -  PRIVACIDAD
 </div>
