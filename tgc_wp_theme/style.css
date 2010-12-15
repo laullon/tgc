@@ -1,3 +1,5 @@
+/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
+
 /*
 Theme Name: The Good Chain
 Theme URI: http://thegoodchain.org/
@@ -13,10 +15,16 @@ License URI:
     margin: 0px !important;
 }
 
-#cuerpo  .interior{
+#cuerpo  .interior
+{
     background: url(images/versionbeta.png) no-repeat scroll top right;
-    padding-bottom: 20px;
+    padding-bottom: 34px;
     padding-top: 20px;
+}
+
+body #cuerpo
+{
+	margin-bottom: 20px;
 }
 
 div.allIzq {
@@ -76,27 +84,30 @@ body.home li.bullIntCard {
 }
 
 body.home div.textAccion {
-    width: 425px;
-    margin: 15px 0 0 0;
+    width: 350px;
+    margin: 10px 0 0 0;
 }
 
 body.home p.textAccion1 {
     color: #175451;
+	width: 300px;
     font-size: 34px;
     margin: 0px;
-    text-align: justify
+    text-align: justify;
+
 }
 
 body.home p.textAccion2 {
     color: #175451;
     margin: 0px;
+	width: 300px;
     font-size: 26px;
-    text-align: justify
+    text-align: justify;
 }
 
 body.home p.usuCadena {
     font-size: 20px;
-    margin: 15px 0 5px 0;
+    margin: 10px 0 5px 0;
 }
 
 body.home div.partInt {
@@ -160,31 +171,32 @@ body.home div.partIntBottom1 {
 }
 
 body.home div.partIntBottom2 {
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
     float: left;
 }
 
 body.home a.greentextCardIzq {
-    color: #7CFC00;
+    color: #99CC00;
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;
+	padding-bottom: 10px;
 }
 
 body.home a.greentextCardDer {
-    color: #7CFC00;
+    color: #99CC00;
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 0 0 54px;
+    margin: 0 0 10px 54px;
 }
 
 div.copyrightFooter {
-    color: #999999;
-    font-size: 12px;
-    float: left;
-    margin: 5px 0 0 351px;
+color: #999;
+font-size: 12px;
+text-align: center;
 }
+
 
 body.home div.izq {
     float: left;
@@ -270,12 +282,14 @@ div.der {
 
 div#info {
     float: left;
-    width: 560px;
+    width: 630px;
+	padding-right: 8px;
+	border-right: 1px solid black;
 }
 
 div#social {
     float: right;
-    width: 380px;
+    width: 310px;
 }
 
 .sf-menu, .sf-menu * {
@@ -287,6 +301,9 @@ div#social {
 .sf-menu {
     line-height: 1.0;
 }
+
+
+
 
 .sf-menu ul {
     position: absolute;
@@ -429,3 +446,235 @@ li.sfHover > a > .sf-sub-indicator {
 .sf-shadow ul.sf-shadow-off {
     background: transparent;
 }
+
+.infoFooter
+{
+ text-align: justify;
+}
+
+/**********************TARJETASSSSSSSSSSSSSSSS**************************/
+.parteArriba
+{
+	width: 100%;
+	margin-bottom: 20px;
+	float: left;
+}
+.parteArriba .imagenCorResto
+{
+	background: url(/wp-content/uploads/2010/12/thegoodchain_logo_s.png) no-repeat scroll top left;
+	/*width:150px;
+	height:134px;*/
+	padding: 130px 180px 0 0;
+	margin: 0 0 0 24px;
+	float: left;
+} 
+.titleModulesTGC
+{
+	float: left;
+	margin: 0px;
+	font-size: 40px; 
+}
+
+.cabeceraModTGC
+{
+	padding: 48px 0 0 0px;
+	font-size: 20px;
+	margin: 0px;
+	text-align: justify;
+}
+#historias
+{
+	margin: 0px 30px 0 0; 
+}
+.textTarjInicial
+{
+	font-size: 16px;
+	text-align: justify;
+	margin: 0px;
+}
+.textTarjResto
+{
+	font-size: 16px;
+	text-align: justify;
+	margin: 0px;
+}
+.textCadBuenasAcciones
+{
+	font-size: 20px;
+	text-align: justify;
+	margin: 0px;
+}
+
+label.tarjetaCabeceraBox
+{
+	color: #99CC00;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0px;
+	padding: 0px;
+}
+.textareaTarjeta
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	height: 80px;
+	width: 440px;
+	margin: 5px 0;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+}
+.TboxFecha
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+	height: 17px;
+	width: 40px;
+	margin: 3px 2px 0 0;
+	padding: 0px;
+	float: left;
+	text-align: center;
+}
+.tarjetaPartD
+{
+	float: left;
+	width: 30%;
+	margin-bottom: 5px;
+}
+
+.tarjetaPartI
+{
+	float: right;
+	width: 66%;
+	margin-bottom: 5px;
+}
+.TboxLugarPais
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+	height: 17px;
+	width: 65px;
+	margin: 3px 2px 0 0;
+	padding: 0px;
+	float: left;
+	text-align: center;
+}
+.TboxLugar
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+	height: 17px;
+	width: 100px;
+	margin: 3px 2px 0 0;
+	padding: 0px;
+	float: left;
+	text-align: center;
+}
+
+.textareaTarjetaDeseo
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	height: 34px;
+	width: 440px;
+	margin: 5px 0;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+}
+.textareaTarjetaEslabon
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	height: 34px;
+	width: 440px;
+	margin: 5px 0;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+	float: left;
+	width: 48%;
+}
+.tarjetaTextoEslabon
+{
+	float: right;
+	width: 48%;
+	font-size: 16px;
+	text-align: justify;
+	margin: 1px 0 0 0;
+}
+.tarjetaUsuPasswd
+{
+	font-size: 16px;
+	text-align: justify;
+	float: left;
+	margin: 0 0 5px 0;
+	padding: 0px;
+	width: 98%;
+}
+.tarjetaCabeceraUsuPWD
+{
+	color: #99CC00;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 5px 0 0 0;
+	padding: 0px;
+	float: left;
+}
+.TboxUsuPwd
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	height: 20px;
+	width: 130px;
+	margin: 5px 5px 5px 5px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+	float: left;
+}
+.tarjetaCabeceraEmail
+{
+	color: #99CC00;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 5px 0 0 0;
+	padding: 0px;
+	float: left;
+}
+.TboxEmail
+{
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	height: 20px;
+	width: 390px;
+	margin: 5px 5px 5px 5px;
+	border-color: #DADADA #DADADA #DADADA #DADADA;
+    border-style: solid;
+    border-width: 2px;
+	float: left;
+}
+.tarjetaPrimerEslabon
+{
+	color:#DADADA;
+	font-size: 24px;
+	text-align: justify;
+}
+/***********************************************************************/
