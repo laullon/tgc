@@ -26,13 +26,21 @@
         </div>
 
         <div id="historia" class="der">
-            <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post">
+            <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
                 <label for="tgc_recibida" class="tarjetaCabeceraBox">¿Cuentanos cómo la has recibido?</label><br/>
                 <textarea class="textareaTarjeta" id="tgc_recibida" ></textarea><br/>
                 <div class="tarjetaPartD">
                     <label for="tgc_date" class="tarjetaCabeceraBox">Cuando</label><br/>
-                    <input type="text" id="tgc_date" name="date" class="TboxFecha" value="probe"/>
-                </div>
+                    <input type="text" id="tgc_date" name="date1" class="TboxFecha" value=""/>
+					<script language="JavaScript">
+						new tcal ({
+							// form name
+							'formname': 'tgc_tarjeta_form',
+							// input name
+							'controlname': 'date1'
+						});
+					</script>
+				</div>
                 <div class="tarjetaPartI">
                     <label for="tgc_place" class="tarjetaCabeceraBox">Donde</label><br/>
                     <input type="text" id="tgc_place" name="pais" class="TboxLugarPais"/>
