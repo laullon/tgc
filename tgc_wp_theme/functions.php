@@ -1,5 +1,8 @@
 <?php
 
+define(BBDD_VERISON, "1");
+require_once 'lib/tarjetas.php';
+
 function register_my_menus() {
     register_nav_menus(
             array('header-menu' => 'Cabecera', 'footer-menu' => 'Pie')
@@ -41,10 +44,7 @@ function tgc_template_redirect() {
     global $wp_query;
 
     if (isset($wp_query->query_vars['tgc_tarjeta'])) {
-        $GLOBALS['tgc_tarjeta'] = $wp_query->query_vars['tgc_tarjeta'];
-        tgc_guardar_historia();
-        get_template_part('tarjeta');
-        die;
+        tarjetas();
     }
 }
 
@@ -56,38 +56,7 @@ function tgc_numero_targeta() {
     echo htmlspecialchars($tgc_tarjeta);
 }
 
-function tgc_cargar_historias() {
-    global $wpdb, $tgc_tarjeta;
-    $t_id = htmlspecialchars($tgc_tarjeta);
-    $sql = $wpdb->prepare("SELECT post_id FROM wp_postmeta WHERE meta_key='tarjeta' AND meta_value='%s'", $t_id);
-    $p_ids = $wpdb->get_col($sql);
-    query_posts(array('post__in' => $p_ids));
-    if (count($p_ids) > 0)
-        if (have_posts ()) {
-            get_template_part('historias');
-            $res=TRUE;
-        }
-    return $res;
-}
 
-function tgc_guardar_historia() {
-    global $tgc_tarjeta;
-    require_once( ABSPATH . WPINC . '/ms-functions.php');
-    if ($_POST['tgc_story'] && $tgc_tarjeta) {
-        $user_id = get_user_id_from_string($_POST['tgc_email']);
-        if (!$user_id)
-            $user_id = get_user_id_from_string('anonimo');
 
-        $post_id = wp_insert_post(array(
-                    'post_author' => $user_id,
-                    'post_title' => "Historia",
-                    'post_content' => $_POST['tgc_story'],
-                    'post_category' => array(get_cat_ID('Historias')),
-                    'post_status' => 'publish'
-                ));
-        add_post_meta($post_id, "tarjeta", $tgc_tarjeta, TRUE);
-        add_post_meta($post_id, "lugar", $_POST['tgc_location'], TRUE);
-    }
-}
 
 ?>
