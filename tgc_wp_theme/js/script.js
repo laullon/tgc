@@ -14,4 +14,15 @@ jq(document).ready(function(){
             return false;
         }
     });
+
+    jq("#login input").change(function(){
+        jq("#regitrado").toggle();
+        jq("#anonimo").toggle();
+    });
+
+    /* new tcal ({
+        'formname': 'tgc_tarjeta_form',
+        'controlname': 'date1'
+    }); */
+
 });

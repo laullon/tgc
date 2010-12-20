@@ -6,8 +6,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
         <?php wp_head(); ?>
         <link rel="shortcut icon" href="/wp-content/themes/tgc_wp_theme/favicon.ico"/>
-		<script language="JavaScript" src="/wp-content/themes/tgc_wp_theme/js/calendar_eu.js"></script>
-		<link rel="stylesheet" href="/wp-content/themes/tgc_wp_theme/calendar.css">
+
     </head>
 
     <body <?php body_class(); ?>>

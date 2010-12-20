@@ -1,12 +1,13 @@
 <?php
 
-define(BBDD_VERISON, "1");
+define(BBDD_VERISON, "2");
 require_once 'lib/tarjetas.php';
 
 function register_my_menus() {
     register_nav_menus(
             array('header-menu' => 'Cabecera', 'footer-menu' => 'Pie')
     );
+    register_sidebars();
 }
 
 function preparar_menu() {
@@ -51,10 +52,6 @@ function tgc_template_redirect() {
 add_action('init', 'register_my_menus');
 add_action('init', 'preparar_menu');
 
-function tgc_numero_targeta() {
-    global $tgc_tarjeta;
-    echo htmlspecialchars($tgc_tarjeta);
-}
 
 
 
