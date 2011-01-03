@@ -1,6 +1,6 @@
 <?php
 
-define(BBDD_VERISON, "2");
+define(BBDD_VERISON, "1");
 require_once 'lib/tarjetas.php';
 
 function register_my_menus() {
@@ -15,6 +15,9 @@ function preparar_menu() {
     wp_enqueue_script("hoverIntent", get_bloginfo('template_url') . "/superfish-1.4.8/js/hoverIntent.js");
     wp_enqueue_script("superfish", get_bloginfo('template_url') . "/superfish-1.4.8/js/superfish.js");
     wp_enqueue_script("script", get_bloginfo('template_url') . "/js/script.js");
+    wp_enqueue_script("jqui", get_bloginfo('template_url') . "/js/jquery-ui-1.8.7.custom.min.js");
+    wp_enqueue_script("datepicker-es", get_bloginfo('template_url') . "/js/jquery.ui.datepicker-es.js");
+    wp_enqueue_style("jqui_css", get_bloginfo('template_url') . "/css/ui-lightness/jquery-ui-1.8.7.custom.css");
 }
 
 add_action('init', 'tgc_activate');

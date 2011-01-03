@@ -15,7 +15,17 @@
                 <div id="menu">
                     <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'sf-menu')); ?>
                 </div>
+                <div id="user">
+                    <?php if (is_user_logged_in ()) : ?>
+                    <?php wp_loginout (); ?>
+                    <?php $user = wp_get_current_user(); ?>
+                        <a href="<?php echo get_author_posts_url($user->ID) ?>">Hola <?php echo $user->display_name ?></a>
+                    <?php else : ?>
+                            <a href="/registro/?action=register">Registro</a>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
+
 
 

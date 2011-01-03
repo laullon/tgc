@@ -43,24 +43,8 @@
                     <input type="text" id="tgc_tarjeta" name="tgc_tarjeta" value="<?php tgc_numero_targeta()?>"/>
                     <p>Para hacer un seguimiento de la cadena puedes apuntar tu código.</p>
                 </div>
-                <div id="login">
-                    <input type="radio" name="login" value="regitrado" CHECKED>Regitrado
-                    <input type="radio" name="login" value="anonimo">Anonimo
-                </div>
-                <div id="regitrado">
-                    <div id="user">
-                        <label for="tgc_user">Nombre</label>
-                        <input type="text" id="tgc_user" name="usuario"/>
-                    </div>
-                    <div id="pass">
-                        <label for="tgc_password">Password</label>
-                        <input type="password" id="tgc_password" name="password"/>
-                    </div>
-                    <a href="#">Crear cuenta</a>
-                </div>
-                <div id="anonimo">
-                    Aqui va el captcha
-                </div>
+                <?php get_template_part("login_form") ?>
+
                 <input type="submit" value="Agregar"/>
                 <h3>¡Gracias por poner el primer eslabón!</h3>
             </form>

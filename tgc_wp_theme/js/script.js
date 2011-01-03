@@ -20,7 +20,10 @@ jq(document).ready(function(){
         jq("#anonimo").toggle();
     });
 
-    /* new tcal ({
+    jq.datepicker.setDefaults( jq.datepicker.regional[ "es" ] );
+    jq( "#tgc_date" ).datepicker({maxDate:"+0d"});
+
+/* new tcal ({
         'formname': 'tgc_tarjeta_form',
         'controlname': 'date1'
     }); */
