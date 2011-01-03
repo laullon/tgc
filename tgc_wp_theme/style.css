@@ -22,6 +22,19 @@ License:
 License URI:
 */
 
+body.home div.izqHome h3
+{
+	 color: #175451;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+body.home div.izqHome p
+{
+	color: #175451;
+    margin: 5px 0;
+}
+
 .submenu a {
     padding: 0px !important;
     margin: 0px !important;
@@ -37,31 +50,8 @@ body #cuerpo {
     margin-bottom: 20px;
 }
 
-div.allIzq {
-    text-align: center;
-}
 
-body.home .imgHeart {
-    background: #ffffff url(images/corazongde.png) no-repeat left center;
-    display: block;
-    width: 255px;
-    height: 226px;
-    margin: 0 0 40px 110px;
-}
-
-body.home h3.textCard {
-    color: #175451;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 5px 0 5px 0;
-}
-
-body.home p.codeCard {
-    color: #175451;
-    margin: 5px 0 5px 0;
-}
-
-body.home .textBoxCard {
+body.home div.izqHome input {
     font-size: 26px;
     width: 300px;
     height: 50px;
@@ -78,17 +68,17 @@ body.home div.allDer {
     margin-left: 25px;
 }
 
-body.home h3.textSencillo {
+body.home div.allDer h3 {
     font-size: 24px;
     margin: 0px;
 }
 
-body.home ul.bulletsCard {
+body.home #historia ul.bulletsCard {
     margin: 0 0 0 5px;
     padding: 0 0 0 8px;
 }
 
-body.home li.bullIntCard {
+body.home #historia ul.bulletsCard li {
     margin: 0 0 0 4px;
     font-size: 18px;
 }
@@ -98,7 +88,7 @@ body.home div.textAccion {
     margin: 10px 0 0 0;
 }
 
-body.home p.textAccion1 {
+body.home #historia div.textAccion p.textAccion1 {
     color: #175451;
     width: 300px;
     font-size: 34px;
@@ -106,7 +96,7 @@ body.home p.textAccion1 {
     text-align: justify;
 }
 
-body.home p.textAccion2 {
+body.home #historia div.textAccion p {
     color: #175451;
     margin: 0px;
     width: 300px;
@@ -124,19 +114,14 @@ body.home div.partInt {
     margin: 0 0 5px 0;
 }
 
-body.home div.partIntIzq {
+body.home #historia div.partInt div {
     float: left;
     width: 48%;
 }
 
-body.home p.boxCard {
+body.home #historia div.partInt p{
     font-size: 18px;
     margin: 5px 0 5px 0;
-}
-
-body.home div.partIntDer {
-    float: right;
-    width: 48%;
 }
 
 body.home div.partIntBottom {
@@ -145,13 +130,9 @@ body.home div.partIntBottom {
     margin: 15px 0 0 0;
 }
 
-body.home p.boxCard2 {
-    float: left;
-    font-size: 18px;
-    margin: 5px 0 5px 0;
-}
 
-body.home .boxNaCla {
+body.home #historia div.partInt input[type="text"],
+body.home #historia div.partInt input[type="password"]{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -160,18 +141,7 @@ body.home .boxNaCla {
     border-width: 1px;
     padding: 0 5px;
     height: 20px;
-}
-
-body.home .boxNaCla2 {
-    margin: 5px 0 0 74px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border-color: #DADADA #DADADA #DADADA #DADADA;
-    border-style: solid;
-    border-width: 1px;
-    padding: 0 5px;
-    height: 20px;
+	margin-bottom: 5px;
 }
 
 body.home div.partIntBottom1 {
@@ -179,25 +149,20 @@ body.home div.partIntBottom1 {
     float: left;
 }
 
-body.home div.partIntBottom2 {
+body.home #historia div.partInt div.partIntBottom {
     margin: 20px 0 0 0;
     float: left;
+	width: 99%;
 }
 
-body.home a.greentextCardIzq {
+body.home #historia div.partInt div.partIntBottom a {
     color: #99CC00;
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 10px;
-}
-
-body.home a.greentextCardDer {
-    color: #99CC00;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 0 10px 54px;
+	width: 45%;
+	float: left;
 }
 
 div.copyrightFooter {
@@ -210,6 +175,17 @@ body.home div.izq {
     float: left;
     border-right: 2px solid #DADADA;
     padding-right: 2%;
+}
+
+body.home div.izqHome
+{
+	 float: left;
+    border-right: 2px solid #DADADA;
+    padding-right: 2%;
+	background: #ffffff url(images/corazongde.png) no-repeat top center;
+	padding-top: 226px;
+	text-align: center;
+	width: 48%;
 }
 
 .clearfix:after {
