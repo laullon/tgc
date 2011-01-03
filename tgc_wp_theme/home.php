@@ -22,7 +22,7 @@
                         <p>puede cambiar al mundo</p>
                         <p>si se hace desde el corazón</p>
                     </div>
-                    <p class="usuCadena">¿Ya eres usuario y quieres seguir una cadena?</p>
+                    <p class="usuCadena">¿Ya eres usuario y quieres seguir tus Tarjetas/Historias?</p>
                     <div class="partInt">
                         <form action="/registro/?action=login" method="post">
                             <div>
