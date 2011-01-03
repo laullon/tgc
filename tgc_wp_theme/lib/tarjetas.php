@@ -24,6 +24,23 @@ function tgc_es_tarjeta_valida() {
     return $tgc_tarjeta == $t->cardCode;
 }
 
+function tgc_lista_tarjetas_usuario() {
+    global $tarjetas_tabla, $wpdb;
+    if (is_user_logged_in ()) {
+        $user = wp_get_current_user();
+        $user_id = $user->ID;
+        $sql = $wpdb->prepare("SELECT cardcode FROM {$tarjetas_tabla} WHERE user_id='{$user_id}' order by `cardModified`");
+        $tarjetas = $wpdb->get_col($sql);
+        if (count($tarjetas) > 0) {
+            echo "<ul class='lista_tarjetas'>";
+            foreach ($tarjetas as $tarjeta) {
+                echo "<li><a href='/tarjeta/{$tarjeta}'>{$tarjeta}</a></li>";
+            }
+            echo "</ul>";
+        }
+    }
+}
+
 function tgc_guardar_historia() {
     global $tgc_tarjeta, $tarjetas_tabla, $wpdb;
 
