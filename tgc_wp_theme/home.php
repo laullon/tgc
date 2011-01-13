@@ -23,24 +23,8 @@
                         <p>si se hace desde el corazón</p>
                     </div>
                     <p class="usuCadena">¿Ya eres usuario y quieres seguir tus Tarjetas/Historias?</p>
-                    <div class="partInt">
-                        <form action="/registro/?action=login" method="post">
-                            <div>
-                                <p class="boxCard">Nombre:</p>
-                                <input type="text" name="log"/>
-                            </div>
-                            <div>
-                                <p class="boxCard">Clave:</p>
-                                <input type="password" name="pwd"/>
-                            </div>
-                            <p class="submit">
-                                <input type="submit" name="wp-submit" id="wp-submit" value="Log In">
-                                <input type="hidden" name="redirect_to" value="http://tgc.laullon.com/registro/">
-                                <input type="hidden" name="testcookie" value="1">
-                                <input type="hidden" name="instance" value="">
-                            </p>
-                        </form>
-                    </div>
+                <?php get_template_part("login_form") ?>
+
                 <?php else : ?>
                 <?php $user = wp_get_current_user(); ?>
                         <h3>Bienvenido <?php echo $user->display_name ?></h3>
@@ -50,11 +34,8 @@
                         <?php tgc_lista_historias_usuario(); ?>
                 <?php endif; ?>
                         <div class="partIntBottom">
-                    <?php if (!is_user_logged_in()) : ?>
-                            <a href="/registro/?action=register">REGISTRASE COMO USUARIO</a>
-                    <?php endif; ?>
                             <a href="#">COMPRA TARJETAS</a>
-                            <a href="#">VISITA EL TOUR</a>
+                            <a href="/como-funciona/">C&Oacute;MO FUNCIONA</a>
                         </div>
 
                         <!--a id="historia" class="ir" href="/historia/">ir &gt;</a-->
