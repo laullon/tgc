@@ -5,15 +5,7 @@ $i = 1; ?>
         <div id="pagina">
             <div id="historias" class="clearfix">
                 <?php while (have_posts ()) : the_post(); ?>
-                    <div id="post-<?php the_ID(); ?>" class="post">
-                        <h1><?php the_title() ?></h1>
-                        <div class="meta" class="clearfix">
-                            <div class="fecha"><?php the_date() ?></div>
-                            <div class="lugar"><?php echo get_post_meta($post->ID, 'lugar', true) ?></div>
-                            <div class="tarjeta">Trajeta: <a href="/tarjeta/<?php echo get_post_meta($post->ID, 'tarjeta', true) ?>"><?php echo get_post_meta($post->ID, 'tarjeta', true) ?></a></div>
-                        </div>
-                        <div class="entry"><?php the_content(); ?></div>
-                    </div>
+                <?php get_template_part("historia") ?>
                 <?php endwhile ?>
                 </div>
             <?php if ($wp_query->max_num_pages > 1) : ?>

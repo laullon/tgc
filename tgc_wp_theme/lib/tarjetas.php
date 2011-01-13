@@ -80,6 +80,7 @@ function tgc_guardar_historia() {
 
             $sql = $wpdb->prepare("UPDATE {$tarjetas_tabla} SET cardModified=NOW() WHERE cardCode='{$tgc_tarjeta}'");
             $wpdb->query($sql);
+            wp_redirect("/historia/{$post_id}/gracias/");
         } else if ($_POST['tgc_cuentanos']) {
             $cuentanos = $_POST['tgc_cuentanos'];
             $date = $_POST['tgc_date'];
@@ -87,8 +88,8 @@ function tgc_guardar_historia() {
             $deseo = $_POST['tgc_deseo'];
             $sql = $wpdb->prepare("UPDATE {$tarjetas_tabla} SET activa=1,cuentanos='%s',date='%s',lugar='%s',deseo='%s',user_id='{$user_id}' WHERE cardCode='{$tgc_tarjeta}'", $cuentanos, $date, $lugar, $deseo);
             $wpdb->query($sql);
+            wp_redirect("/tarjeta/{$tgc_tarjeta}");
         }
-        wp_redirect("/tarjeta/{$tgc_tarjeta}");
         die;
     }
 }

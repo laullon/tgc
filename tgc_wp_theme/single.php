@@ -1,20 +1,20 @@
 <?php get_header(); ?>
+<?php the_post(); ?>
 <div id="cuerpo" class="exterior clearfix">
     <div class="interior clearfix">
         <div id="pagina">
-            <?php the_post(); ?>
-            <h1><?php the_title() ?></h1>
-            <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <div class="fecha">
-                    <?php the_time('F jS, Y') ?>
+            <? if (isset($wp_query->query_vars['tgc_gracias'])) : ?>
+                <div class="gracias">
+                    <h2>Gracias por enviar tu historia</h2>
+                    <p class="tarjeta">Aparecerá en el historial de la tarjeta: <a href="/tarjeta/<?php echo get_post_meta($post->ID, 'tarjeta', true) ?>"><?php echo get_post_meta($post->ID, 'tarjeta', true) ?></a></p>
+                    <p class="link">Enlace de la historia:<a href="<?php the_permalink() ?>"><?php the_permalink() ?></a></p>
                 </div>
-                <div class="tarjeta">Trajeta: <a href="/tarjeta/<?php echo get_post_meta($post->ID, 'tarjeta', true) ?>"><?php echo get_post_meta($post->ID, 'tarjeta', true) ?></a></div>
-                <div class="lugar"><?php echo get_post_meta($post->ID, 'lugar', true) ?></div>
-                <div class="entry">
-                    <?php the_content(); ?>
+            <?php endif; ?>
+            <?php get_template_part("historia") ?>
+            <? if (isset($wp_query->query_vars['tgc_gracias'])) : ?>
+                    <p class="redes_aviso">Además automáticamente se publica en la página de Facebook de The Good Chain y se crea un Twitter de forma totalmente anónima para que todos sepan que las cadenas de favores siguen creciendo.</p>
+            <?php endif; ?>
                 </div>
-            </div>
-        </div>
         <?php get_sidebar( ); ?>
                 </div>
             </div>

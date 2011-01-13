@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
         <?php wp_head(); ?>
         <link rel="shortcut icon" href="/wp-content/themes/tgc_wp_theme/favicon.ico"/>
-
+        <script type="text/javascript" src="http://fast.fonts.com/jsapi/d25e522c-556d-4cca-9a72-5b41faa634dc.js"></script>
     </head>
 
     <body <?php body_class(); ?>>

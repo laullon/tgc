@@ -17,24 +17,21 @@
 
         <div class="der">
             <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
+                <h2>Cuentanos quien eres:</h2>
+                <?php get_template_part("login_form") ?>
+                <h2>Cuentanos tu historia:</h2>
                 <div id="cuando">
-                    <label for="tgc_date">Cuando</label>
+                    <label for="tgc_date">¿Cuando?</label>
                     <input type="text" id="tgc_date" name="tgc_date" value="<?php echo $_POST['tgc_date'] ?>"/>
                 </div>
                 <div id="donde">
-                    <label for="tgc_place">Donde</label>
+                    <label for="tgc_place">¿Donde?</label>
                     <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>"/>
                 </div>
                 <div id="historia">
                     <label for="tgc_story">¿Cómo ha sido?</label>
                     <textarea id="tgc_story" name="tgc_story" rows="3" cols="40"><?php echo $_POST['tgc_story'] ?></textarea>
                 </div>
-                <div id="eslabon">
-                    <label for="tgc_tarjeta">Este es tu código de eslabón</label>
-                    <input type="text" id="tgc_tarjeta" name="tgc_tarjeta" value="<?php tgc_numero_targeta() ?>"/>
-                    <p>Para hacer un seguimiento de la cadena puedes apuntar tu código.</p>
-                </div>
-                <?php get_template_part("login_form") ?>
                 <input type="submit" value="Agregar"/>
             </form>
         </div>

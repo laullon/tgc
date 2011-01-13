@@ -1,5 +1,15 @@
 <?php
 
+add_filter('post_link', 'tgc_get_permalink',99,3);
+function tgc_get_permalink($permalink, $post, $leavename){
+    global $post;
+    if(in_array(get_cat_ID('Historias'), wp_get_post_categories($post->ID))){
+        $permalink=home_url('/historia/' . $post->ID . '/');
+    }
+    return $permalink;
+}
+
+
 function tgc_lista_historias_usuario() {
     if (is_user_logged_in ()) {
         $user = wp_get_current_user();

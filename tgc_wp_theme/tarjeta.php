@@ -22,6 +22,7 @@
 
         <div class="der">
             <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
+                <?php get_template_part("login_form") ?>
                 <div id="cuentanos">
                     <label for="tgc_cuentanos">¿Cuentanos cómo la has recibido?</label>
                     <textarea id="tgc_cuentanos" name="tgc_cuentanos" rows="3" cols="40"></textarea>
@@ -38,13 +39,6 @@
                     <label for="tgc_deseo">Pon aquí tu deseo</label>
                     <textarea id="tgc_deseo" name="tgc_deseo" rows="3" cols="40"></textarea>
                 </div>
-                <div id="eslabon">
-                    <label for="tgc_tarjeta">Este es tu código de eslabón</label>
-                    <input type="text" id="tgc_tarjeta" name="tgc_tarjeta" value="<?php tgc_numero_targeta()?>"/>
-                    <p>Para hacer un seguimiento de la cadena puedes apuntar tu código.</p>
-                </div>
-                <?php get_template_part("login_form") ?>
-
                 <input type="submit" value="Agregar"/>
                 <h3>¡Gracias por poner el primer eslabón!</h3>
             </form>

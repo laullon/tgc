@@ -15,17 +15,16 @@ jq(document).ready(function(){
         }
     });
 
-    jq("#login input").change(function(){
-        jq("#regitrado").toggle();
-        jq("#anonimo").toggle();
+    jq("#login a.tab_control").click(function(){
+        jq("#login a.tab_control").removeClass("selec");
+        jq("#login div.tab").hide();
+        jq(this).addClass("selec");
+        jq("#login "+jq(this).attr("href")).show();
+        return false;
     });
 
     jq.datepicker.setDefaults( jq.datepicker.regional[ "es" ] );
     jq( "#tgc_date" ).datepicker({maxDate:"+0d"});
 
-/* new tcal ({
-        'formname': 'tgc_tarjeta_form',
-        'controlname': 'date1'
-    }); */
 
 });

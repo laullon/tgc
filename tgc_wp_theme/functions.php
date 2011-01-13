@@ -35,14 +35,16 @@ add_action('generate_rewrite_rules', 'tgc_rewrite_rules');
 
 function tgc_rewrite_rules($wp_rewrite) {
     $br = array('tarjeta/(.*)$' => 'index.php?tgc_tarjeta=$matches[1]');
-    $br2 = array('historia/(.*)$' => 'index.php?p=$matches[1]');
-    $wp_rewrite->rules = $br + $br2 + $wp_rewrite->rules;
+    $br2 = array('historia/(\d*)/gracias$' => 'index.php?p=$matches[1]&tgc_gracias=true');
+    $br3 = array('historia/(\d*)$' => 'index.php?p=$matches[1]');
+    $wp_rewrite->rules = $br + $br2 + $br3 + $wp_rewrite->rules;
 }
 
 add_filter('query_vars', 'tgc_query_vars');
 
 function tgc_query_vars($vars) {
     $vars[] = 'tgc_tarjeta';
+    $vars[] = 'tgc_gracias';
     return $vars;
 }
 

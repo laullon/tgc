@@ -22,16 +22,23 @@ License:
 License URI:
 */
 
+#pagina .login.profile {
+    clear: both;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
 body.home div.izqHome h3
 {
-	 color: #175451;
+    color: #175451;
     font-size: 30px;
     font-weight: bold;
     margin: 5px 0;
 }
 body.home div.izqHome p
 {
-	color: #175451;
+    color: #175451;
     margin: 5px 0;
 }
 
@@ -141,7 +148,7 @@ body.home #historia div.partInt input[type="password"]{
     border-width: 1px;
     padding: 0 5px;
     height: 20px;
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 body.home div.partIntBottom1 {
@@ -152,7 +159,7 @@ body.home div.partIntBottom1 {
 body.home #historia div.partInt div.partIntBottom {
     margin: 20px 0 0 0;
     float: left;
-	width: 99%;
+    width: 99%;
 }
 
 body.home #historia div.partInt div.partIntBottom a {
@@ -161,8 +168,8 @@ body.home #historia div.partInt div.partIntBottom a {
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 10px;
-	width: 45%;
-	float: left;
+    width: 45%;
+    float: left;
 }
 
 div.copyrightFooter {
@@ -179,13 +186,13 @@ body.home div.izq {
 
 body.home div.izqHome
 {
-	 float: left;
+    float: left;
     border-right: 2px solid #DADADA;
     padding-right: 2%;
-	background: #ffffff url(images/corazongde.png) no-repeat top center;
-	padding-top: 226px;
-	text-align: center;
-	width: 48%;
+    background: #ffffff url(images/corazongde.png) no-repeat top center;
+    padding-top: 226px;
+    text-align: center;
+    width: 48%;
 }
 
 .clearfix:after {
@@ -451,11 +458,11 @@ body.page #pagina:before {
 #sidebar {
     float: right;
     margin-top: 42px;
-    width: 230px;
+    width: 250px;
 }
 
 #pagina {
-    width: 700px;
+    width: 680px;
     float: left;
     margin-right: 10px;
 }
@@ -470,7 +477,7 @@ body.page #pagina:before {
 
 #tarjeta input,
 #tarjeta textarea,
-#tarjeta .marco,
+.marco,
 #theme-my-login input[type="text"],
 #theme-my-login input[type="password"],
 #theme-my-login {
@@ -520,8 +527,22 @@ body.page #pagina:before {
     margin-bottom: 10px;
 }
 
-#tarjeta #login {
+#login {
     clear: both;
+}
+
+#login a.tab_control {
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    width: 33%;
+    color: #9C0;
+}
+
+#login a.selec{
+    text-decoration: underline !important;
+	font-weight: bold;
 }
 
 #tarjeta #regitrado label,
@@ -566,7 +587,7 @@ body.page #pagina:before {
     margin-bottom: 10px;
 }
 
-#tarjeta #anonimo {
+#login #anonimo,#login #crear{
     display: none;
 }
 
@@ -585,7 +606,7 @@ body.page #pagina:before {
     padding: 0;
 }
 #sidebar ul ul{
-    padding-left: 40px;
+    padding-left: 0px;
 }
 
 #theme-my-login {
@@ -604,3 +625,38 @@ body.page #pagina:before {
     float: left;
 }
 
+div.post.historia div.meta p{
+    margin: 0px !important;
+    font-size: 0.8em;
+}
+
+div.post.historia div p{
+    margin-top: 5px!important;
+    margin-bottom:  5px!important;
+}
+
+div#historias div.historia h1.titulo{
+    font-size: 1.5em;
+}
+
+body.single div.historia h1.titulo{
+    margin-top: 0px;
+    float: left;
+}
+
+body.single div.historia{
+    margin-top: 25px;
+}
+
+body.single div.post.historia div.meta{
+    float: right;
+    text-align: right;
+}
+
+body.single div.post.historia div.texto,
+body.single div.post.historia div.texto div.sociable{
+    padding-top:16px;
+    border-top-color: #DADADA;
+    border-top-style: solid;
+    border-top-width: 2px;
+}

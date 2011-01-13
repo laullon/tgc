@@ -44,7 +44,7 @@
                 <?php else : ?>
                 <?php $user = wp_get_current_user(); ?>
                         <h3>Bienvenido <?php echo $user->display_name ?></h3>
-                        <h4>Tus Trajetas:</h4>
+                        <h4>Tus Tarjetas:</h4>
                         <?php tgc_lista_tarjetas_usuario(); ?>
                         <h4>Tus Historias:</h4>
                         <?php tgc_lista_historias_usuario(); ?>
