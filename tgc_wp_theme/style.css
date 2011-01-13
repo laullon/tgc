@@ -32,7 +32,7 @@ License URI:
 body.home div.izqHome h3
 {
     color: #175451;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     margin: 5px 0;
 }
@@ -76,7 +76,7 @@ body.home div.allDer {
 }
 
 body.home div.allDer h3 {
-    font-size: 24px;
+    font-size: 18px;
     margin: 0px;
 }
 
@@ -87,17 +87,16 @@ body.home #historia ul.bulletsCard {
 
 body.home #historia ul.bulletsCard li {
     margin: 0 0 0 4px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 body.home div.textAccion {
-    width: 350px;
+    width: 425px;
     margin: 10px 0 0 0;
 }
 
 body.home #historia div.textAccion p.textAccion1 {
     color: #175451;
-    width: 300px;
     font-size: 34px;
     margin: 0px;
     text-align: justify;
@@ -106,13 +105,12 @@ body.home #historia div.textAccion p.textAccion1 {
 body.home #historia div.textAccion p {
     color: #175451;
     margin: 0px;
-    width: 300px;
     font-size: 26px;
     text-align: justify;
 }
 
 body.home p.usuCadena {
-    font-size: 20px;
+    font-size: 16px;
     margin: 10px 0 5px 0;
 }
 
@@ -127,16 +125,29 @@ body.home #historia div.partInt div {
 }
 
 body.home #historia div.partInt p{
-    font-size: 18px;
+    font-size: 16px;
     margin: 5px 0 5px 0;
 }
 
-body.home div.partIntBottom {
-    width: 100%;
-    float: left;
-    margin: 15px 0 0 0;
+body.home #historia div.partInt input{
+    -moz-border-radius: 5px 5px 5px 5px;
+    border: 2px solid #DADADA;
+    margin-left: -5px;
+    padding: 3px;
 }
 
+body.home div.partIntBottom {
+    width: 90%;
+    float: left;
+    margin: 10px 0 0 0;
+}
+body.home div.partIntBottom a {
+	font-size: 14px;
+	color: #99CC00;
+	text-decoration: none;
+	font-weight: bold;
+	margin-right: 20px;
+}
 
 body.home #historia div.partInt input[type="text"],
 body.home #historia div.partInt input[type="password"]{
@@ -176,6 +187,7 @@ div.copyrightFooter {
     color: #999;
     font-size: 12px;
     text-align: center;
+	margin: 3px 0 0 0;
 }
 
 body.home div.izq {
@@ -193,6 +205,7 @@ body.home div.izqHome
     padding-top: 226px;
     text-align: center;
     width: 48%;
+	margin-top: 20px;
 }
 
 .clearfix:after {
@@ -268,6 +281,29 @@ div.der {
 #menu-footer ul li {
     display: inline;
     list-style-type: none;
+	padding-top: 10px;
+}
+
+#menu-footer div.menu-menu-abajo-container #menu-menu-abajo
+{
+	padding-top: 5px;
+}
+
+#menu-footer ul li a {
+	text-decoration: none;
+	color: #175451;
+	font-size: 16px;
+	font-weight: bold;
+	border-right: 1px solid #175451;
+	padding-right: 5px;
+}
+#menu-footer ul li:last-child a {
+	text-decoration: none;
+	color: #175451;
+	font-size: 16px;
+	font-weight: bold;
+	padding-right: 5px;
+	border: none;
 }
 
 div#info {
@@ -275,6 +311,7 @@ div#info {
     width: 630px;
     padding-right: 8px;
     border-right: 1px solid black;
+	margin-bottom: 5px;
 }
 
 div#social {
@@ -314,6 +351,7 @@ div#social {
 .sf-menu a {
     display: block;
     position: relative;
+	
 }
 
 .sf-menu li:hover ul,
@@ -353,6 +391,7 @@ ul.sf-menu li li li.sfHover ul {
     border-left: 1px solid #fff;
     text-decoration: none;
     padding: 5px 10px;
+	font-weight: bold;
 }
 
 #user a {
@@ -473,6 +512,7 @@ body.page #pagina:before {
     font-weight: bold;
     font-size: 20px;
     vertical-align: middle;
+
 }
 
 #tarjeta input,
@@ -480,6 +520,7 @@ body.page #pagina:before {
 .marco,
 #theme-my-login input[type="text"],
 #theme-my-login input[type="password"],
+#theme-my-login input[type="submit"],
 #theme-my-login {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -490,6 +531,34 @@ body.page #pagina:before {
     padding: 3px;
     margin-left: -5px;
 }
+#login a.tab_control {
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    width: 33%;
+    color: #9C0;
+}
+
+#login a.selec{
+    text-decoration: underline !important;
+	font-weight: bold;
+}
+
+#login a.tab_control {
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    width: 33%;
+    color: #9C0;
+}
+
+#login a.selec{
+    text-decoration: underline !important;
+	font-weight: bold;
+}
+
 
 #tarjeta #cuando,
 #tarjeta #donde,
@@ -529,20 +598,6 @@ body.page #pagina:before {
 
 #login {
     clear: both;
-}
-
-#login a.tab_control {
-    display: block;
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    width: 33%;
-    color: #9C0;
-}
-
-#login a.selec{
-    text-decoration: underline !important;
-	font-weight: bold;
 }
 
 #tarjeta #regitrado label,
@@ -594,7 +649,7 @@ body.page #pagina:before {
 #sidebar h2.widgettitle {
     color: #99CC00;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19px;
     background: url(images/mini.png) no-repeat 0 3px;
     padding-left: 20px;
 }
@@ -620,9 +675,14 @@ body.page #pagina:before {
     display: block;
 }
 
-#theme-my-login input#rememberme{
+#theme-my-login input#rememberme{ 
     display: block;
     float: left;
+}
+
+#theme-my-login #your-profile .form-table .description
+{
+	font-size: 14px;
 }
 
 div.post.historia div.meta p{
@@ -659,4 +719,25 @@ body.single div.post.historia div.texto div.sociable{
     border-top-color: #DADADA;
     border-top-style: solid;
     border-top-width: 2px;
+}
+
+#pagina #theme-my-login #your-profile textarea#description
+{
+	-moz-border-radius: 5px 5px 5px 5px;
+    border: 2px solid #DADADA;
+    margin-left: -5px;
+    padding: 3px;
+}
+
+#theme-my-login table.form-table th
+{
+	vertical-align:top; 
+}
+
+#theme-my-login select
+{
+	-moz-border-radius: 5px 5px 5px 5px;
+    border: 2px solid #DADADA;
+    margin-left: -5px;
+    padding: 3px;
 }
