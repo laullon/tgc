@@ -4,7 +4,8 @@
         <div id="tarjeta" class="izqHome">
             <h3>¿Has recibido una tarjeta?</h3>
             <p>Introduce el código y descubre su historia</p>
-            <input type="textbox" name="tarjeta"/>
+			<p class="tarjIncorrecta" id="tarjIncorrecta">Formato de la tarjeta invalida. Inténtalo de nuevo</p>
+            <input type="textbox" name="tarjeta" id="tgc_code"/>
             <a id="tarjeta" class="ir" href="/tarjeta/">ir &gt;</a>
         </div>
         <div id="historia" class="der">
@@ -34,7 +35,7 @@
                         <?php tgc_lista_historias_usuario(); ?>
                 <?php endif; ?>
                         <div class="partIntBottom">
-                            <a href="#">COMPRA TARJETAS</a>
+                            <a href="/tarjetas/">COMPRA TARJETAS</a>
                             <a href="/como-funciona/">C&Oacute;MO FUNCIONA</a>
                         </div>
 

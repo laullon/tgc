@@ -4,7 +4,7 @@
         <a class="tab_control" href="#crear">Crear cuenta</a>
         <a class="tab_control" href="#anonimo">Anonimo</a>
     </div>
-    <div id="regitrado" class="tab">
+    <div id="regitrado" class="tab clearfix">
         <?php if (is_user_logged_in ()) : $user = wp_get_current_user(); ?>
             <p>Estas logeado como <?php echo $user->display_name ?></p>
         <?php wp_loginout("/tarjeta/" . tgc_get_numero_targeta()); ?>
@@ -20,11 +20,11 @@
                 </div>
         <?php endif; ?>
     </div>
-    <div id="crear" class="tab">
+    <div id="crear" class="tab clearfix">
         <p>registrate para seguir tus tarjetas e historias:</p>
         <a href="/registro/?action=register">Formulario de Registro</a>
     </div>
-    <div id="anonimo" class="tab">
+    <div id="anonimo" class="tab clearfix">
         <p>No es obligatorio registrarte pero en este caso recuerda que el sistema no recordará tus tarjetas ni tus números de historias. Tendrás que anotarlos o recordarlos externamente  para seguir el  recorrido de tus tarjetas más adelante.</p>
     </div>
 </div>

@@ -22,6 +22,14 @@ License:
 License URI:
 */
 
+.izqHome .tarjIncorrecta
+{
+	color: #FF0000 !important;
+	font-size: 14px;
+	font-weight: bold;
+	display: none;
+}
+
 #pagina .login.profile {
     clear: both;
     width: 90%;
@@ -60,7 +68,7 @@ body #cuerpo {
 
 body.home div.izqHome input {
     font-size: 26px;
-    width: 300px;
+    width: 359px;
     height: 50px;
     margin: 5px 0 5px 5px;
     -moz-border-radius: 15px;
@@ -146,7 +154,7 @@ body.home div.partIntBottom a {
 	color: #99CC00;
 	text-decoration: none;
 	font-weight: bold;
-	margin-right: 20px;
+	margin-right: 12px;
 }
 
 body.home #historia div.partInt input[type="text"],
@@ -165,6 +173,35 @@ body.home #historia div.partInt input[type="password"]{
 body.home div.partIntBottom1 {
     margin: 10px 0 0 0;
     float: left;
+}
+
+div.allDer #login #registrado label
+{
+	font-size: 16px;
+}
+#login #regitrado #user
+{
+	float: left;
+	width: 48%;
+}
+#login #regitrado #pass
+{
+	float: left;
+	width: 48%;
+}
+#login #crear
+{
+	float: left;
+}
+
+
+#tgc_user, #tgc_password
+{
+	 -moz-border-radius: 5px 5px 5px 5px;
+    border: 1px solid #DADADA;
+    margin-left: -5px;
+    padding: 3px;
+	margin-top: 1px;
 }
 
 body.home #historia div.partInt div.partIntBottom {
@@ -531,34 +568,6 @@ body.page #pagina:before {
     padding: 3px;
     margin-left: -5px;
 }
-#login a.tab_control {
-    display: block;
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    width: 33%;
-    color: #9C0;
-}
-
-#login a.selec{
-    text-decoration: underline !important;
-	font-weight: bold;
-}
-
-#login a.tab_control {
-    display: block;
-    float: left;
-    text-align: center;
-    text-decoration: none;
-    width: 33%;
-    color: #9C0;
-}
-
-#login a.selec{
-    text-decoration: underline !important;
-	font-weight: bold;
-}
-
 
 #tarjeta #cuando,
 #tarjeta #donde,
@@ -594,10 +603,6 @@ body.page #pagina:before {
 
 #tarjeta div.der div {
     margin-bottom: 10px;
-}
-
-#login {
-    clear: both;
 }
 
 #tarjeta #regitrado label,
@@ -642,7 +647,7 @@ body.page #pagina:before {
     margin-bottom: 10px;
 }
 
-#login #anonimo,#login #crear{
+#tarjeta #anonimo {
     display: none;
 }
 
@@ -740,4 +745,46 @@ body.single div.post.historia div.texto div.sociable{
     border: 2px solid #DADADA;
     margin-left: -5px;
     padding: 3px;
+}
+
+#login
+{
+margin-top:10px;
+    clear: both;
+}
+
+
+#login .tabs a{
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+display:block;
+float: left;
+  background-color: #f0f0f0;
+  border: 1px solid #175451;
+  border-bottom-width: 0px;
+  padding: 4px 1em;
+  text-decoration: none;
+  margin-right:5px;
+  color:#175451;
+}
+
+#login .tabs a.selec{
+  background-color: #175451;
+  color: #fff;
+}
+
+#login .tab
+{
+  background-color: #fff;
+  border: 1px solid #175451;
+  padding: 1em;
+	-moz-border-radius: 0px 5px 5px 5px;
+	-webkit-border-radius: 0px 5px 5px 5px;
+	border-radius: 0px 5px 5px 5px;
+}
+
+#login #crear,#login #anonimo
+{
+	display: none;
 }

@@ -6,15 +6,25 @@ jq(document).ready(function(){
         var path=jq(this).attr("href");
         var id=jq(this).attr("id");
         var ele=jq("input[name='"+id+"']").attr("value");
-        if(ele){
+		ele = ele.toUpperCase().split(' ').join('');
+		var regExPattern = /^([a-zA-Z0-9]{16})$/;
+        if(ele.match(regExPattern)){
             var des=path+ele+"/";
             jq(this).attr("href",des);
             return true;
         }else{
+			alert("TARJETA INCORRECTA");
+			muestra(jq("p.tarjIncorrecta").attr("id"));
             return false;
         }
     });
 
+		function muestra(id)
+		{
+			var mostrar = document.getElementById(id);
+			mostrar.style.display='block'; 
+		}
+	
     jq("#login a.tab_control").click(function(){
         jq("#login a.tab_control").removeClass("selec");
         jq("#login div.tab").hide();
