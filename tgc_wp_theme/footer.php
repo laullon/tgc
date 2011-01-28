@@ -1,20 +1,15 @@
 <div id="footer" class="exterior clearfix">
     <div class="interior clearfix">
-        <div id="menu-footer" class="clearfix">
+        <div id="menu-footer"><?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?></div>
+        <div class="clearfix">
             <h1>THEGOODCHAIN</h1>
-            <?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
         </div>
-        <div id="info">
             <p class="infoFooter">Es una Asociación sin ánimo de lucro. Sin adscripción ideológica, política o religiosa. Ha sido creado por cientos de voluntarios que han contribuido con su tiempo, talento y corazón con el único objetivo de fomentar acciones de generosidad desinteresada de forma anónima y/o a personas desconocidas</p>
-        </div>
-        <div id="social">
-            <p>Si te gusta el proyecto, compártelo con tus amigos</p>
-        </div>
     </div>
 
 
 </div>
 
 <div class="copyrightFooter">
-	THE GOOD CHAIN Calle Gobernador, 26 MADRID - CIF G86049855  -  COPYRIGHT ©2010    -   AVISO LEGAL  -  PRIVACIDAD
+	THE GOOD CHAIN Calle Gobernador, 26 MADRID - CIF G86049855  -  COPYRIGHT ©2010    -   <a href="/legal/">AVISO LEGAL</a>  -  <a href="/privacidad/">PRIVACIDAD</a>
 </div>

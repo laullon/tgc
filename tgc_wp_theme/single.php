@@ -7,7 +7,8 @@
                 <div class="gracias">
                     <h2>Gracias por enviar tu historia</h2>
                     <p class="tarjeta">Aparecerá en el historial de la tarjeta: <a href="/tarjeta/<?php echo get_post_meta($post->ID, 'tarjeta', true) ?>"><?php echo get_post_meta($post->ID, 'tarjeta', true) ?></a></p>
-                    <p class="link">Enlace de la historia:<a href="<?php the_permalink() ?>"><?php the_permalink() ?></a></p>
+                    <p class="link">Guarda el enlace de la historia: <a href="<?php the_permalink() ?>"><?php the_permalink() ?></a></p>
+                    <p class="link">C&oacute;digo de la historia: <a href="<?php the_permalink() ?>"><?php echo $post->ID ?></a></p>
                 </div>
             <?php endif; ?>
             <?php get_template_part("historia") ?>

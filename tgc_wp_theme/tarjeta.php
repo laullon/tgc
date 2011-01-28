@@ -24,19 +24,19 @@
             <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
                 <?php get_template_part("login_form") ?>
                 <div id="cuentanos">
-                    <label for="tgc_cuentanos">¿Cuentanos cómo la has recibido?</label>
+                    <label for="tgc_cuentanos">Cu&eacute;ntanos cómo la has recibido</label>
                     <textarea id="tgc_cuentanos" name="tgc_cuentanos" rows="3" cols="40"></textarea>
                 </div>
                 <div id="cuando">
-                    <label for="tgc_date">Cuando</label>
+                    <label for="tgc_date">Cu&aacute;ndo</label>
                     <input type="text" id="tgc_date" name="tgc_date"/>
                 </div>
                 <div id="donde">
-                    <label for="tgc_place">Donde</label>
+                    <label for="tgc_place">D&oacute;nde</label>
                     <input type="text" id="tgc_place" name="tgc_place"/>
                 </div>
                 <div id="deseo">
-                    <label for="tgc_deseo">Pon aquí tu deseo</label>
+                    <label for="tgc_deseo">¿Qu&eacute; te motiva a empezar esta cadena?</label>
                     <textarea id="tgc_deseo" name="tgc_deseo" rows="3" cols="40"></textarea>
                 </div>
                 <input type="submit" value="Agregar"/>

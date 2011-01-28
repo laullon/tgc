@@ -15,7 +15,7 @@
                 <div id="menu">
                     <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'sf-menu')); ?>
                 </div>
-                <div id="user">
+                <div id="user_info">
                     <?php if (is_user_logged_in ()) : ?>
                     <?php wp_loginout (); ?>
                     <?php $user = wp_get_current_user(); ?>

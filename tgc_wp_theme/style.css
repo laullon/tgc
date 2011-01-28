@@ -22,12 +22,138 @@ License:
 License URI:
 */
 
-.izqHome .tarjIncorrecta
-{
-	color: #FF0000 !important;
-	font-size: 14px;
-	font-weight: bold;
-	display: none;
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1.2em;
+    font-size: 12px;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+h3{
+    font-size: 1.3em;
+}
+
+div#pagina h3{
+    color: #9C0;
+}
+
+h1,h2,h3,h4{
+    margin-bottom: 10px;
+}
+
+div#pagina h2{
+    margin-top: 20px;
+}
+
+.seccion{
+    clear: both;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+a{
+    color: #175451;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+input[type="text"],
+input[type="password"],
+textarea{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 2px;
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 16px;
+}
+
+.marco{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+}
+
+#user,
+#cuando{
+    float: left;
+    width: 48%;
+}
+
+#pass,
+#donde{
+    width: 48%;
+    float: right;
 }
 
 #pagina .login.profile {
@@ -37,17 +163,55 @@ License URI:
     padding: 20px;
 }
 
-body.home div.izqHome h3
+#codigos .error
+{
+    color: #FF0000 !important;
+    font-size: 14px;
+    font-weight: bold;
+    display: none;
+}
+
+#codigos h3
 {
     color: #175451;
     font-size: 27px;
     font-weight: bold;
     margin: 5px 0;
 }
-body.home div.izqHome p
+
+#codigos p
 {
     color: #175451;
     margin: 5px 0;
+}
+
+#codigos
+{
+    background: #ffffff url(images/corazongde.png) no-repeat top center;
+    padding-top: 226px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#codigos input {
+    float: left;
+    font-size: 26px;
+    width: 359px;
+    height: 50px;
+    margin: 5px 0 5px 5px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    border-color: #DADADA;
+    border-style: solid;
+    border-width: 2px;
+    padding: 0 10px;
+}
+
+#codigos a.ir {
+    display: block;
+    margin-top: 25px;
+    text-align: right;
 }
 
 .submenu a {
@@ -57,193 +221,61 @@ body.home div.izqHome p
 
 #cuerpo  .interior {
     background: url(images/versionbeta.png) no-repeat scroll top right;
-    padding-bottom: 34px;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 34px;
 }
 
 body #cuerpo {
     margin-bottom: 20px;
 }
 
-
-body.home div.izqHome input {
-    font-size: 26px;
-    width: 359px;
-    height: 50px;
-    margin: 5px 0 5px 5px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
-    border-color: #DADADA #DADADA #DADADA #DADADA;
-    border-style: solid;
-    padding: 0 10px;
-}
-
-body.home div.allDer {
-    margin-left: 25px;
-}
-
-body.home div.allDer h3 {
-    font-size: 18px;
-    margin: 0px;
-}
-
-body.home #historia ul.bulletsCard {
+#portada ul {
     margin: 0 0 0 5px;
     padding: 0 0 0 8px;
 }
 
-body.home #historia ul.bulletsCard li {
+#portada ul li {
     margin: 0 0 0 4px;
     font-size: 16px;
 }
 
-body.home div.textAccion {
-    width: 425px;
-    margin: 10px 0 0 0;
+#portada #sencillo {
+    margin-top: 50px;
 }
 
-body.home #historia div.textAccion p.textAccion1 {
+#portada #accion h1 {
     color: #175451;
     font-size: 34px;
-    margin: 0px;
+    margin: 0px !important;
     text-align: justify;
 }
 
-body.home #historia div.textAccion p {
+#portada #accion h2 {
     color: #175451;
-    margin: 0px;
+    margin: 0px !important;
     font-size: 26px;
     text-align: justify;
 }
 
-body.home p.usuCadena {
-    font-size: 16px;
-    margin: 10px 0 5px 0;
-}
-
-body.home div.partInt {
-    width: 100%;
-    margin: 0 0 5px 0;
-}
-
-body.home #historia div.partInt div {
-    float: left;
-    width: 48%;
-}
-
-body.home #historia div.partInt p{
-    font-size: 16px;
-    margin: 5px 0 5px 0;
-}
-
-body.home #historia div.partInt input{
-    -moz-border-radius: 5px 5px 5px 5px;
-    border: 2px solid #DADADA;
-    margin-left: -5px;
-    padding: 3px;
-}
-
-body.home div.partIntBottom {
-    width: 90%;
-    float: left;
-    margin: 10px 0 0 0;
-}
-body.home div.partIntBottom a {
-	font-size: 14px;
-	color: #99CC00;
-	text-decoration: none;
-	font-weight: bold;
-	margin-right: 12px;
-}
-
-body.home #historia div.partInt input[type="text"],
-body.home #historia div.partInt input[type="password"]{
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border-color: #DADADA #DADADA #DADADA #DADADA;
-    border-style: solid;
-    border-width: 1px;
-    padding: 0 5px;
-    height: 20px;
-    margin-bottom: 5px;
-}
-
-body.home div.partIntBottom1 {
-    margin: 10px 0 0 0;
-    float: left;
-}
-
-div.allDer #login #registrado label
-{
-	font-size: 16px;
-}
-#login #regitrado #user
-{
-	float: left;
-	width: 48%;
-}
-#login #regitrado #pass
-{
-	float: left;
-	width: 48%;
-}
-#login #crear
-{
-	float: left;
-}
-
-
-#tgc_user, #tgc_password
-{
-	 -moz-border-radius: 5px 5px 5px 5px;
-    border: 1px solid #DADADA;
-    margin-left: -5px;
-    padding: 3px;
-	margin-top: 1px;
-}
-
-body.home #historia div.partInt div.partIntBottom {
-    margin: 20px 0 0 0;
-    float: left;
-    width: 99%;
-}
-
-body.home #historia div.partInt div.partIntBottom a {
+#portada #links a {
     color: #99CC00;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     font-weight: bold;
     padding-bottom: 10px;
-    width: 45%;
+    width: 49%;
     float: left;
+    display: block;
+    text-align: center;
 }
 
 div.copyrightFooter {
     color: #999;
     font-size: 12px;
     text-align: center;
-	margin: 3px 0 0 0;
+    margin: 3px 0 0 0;
 }
 
-body.home div.izq {
-    float: left;
-    border-right: 2px solid #DADADA;
-    padding-right: 2%;
-}
-
-body.home div.izqHome
-{
-    float: left;
-    border-right: 2px solid #DADADA;
-    padding-right: 2%;
-    background: #ffffff url(images/corazongde.png) no-repeat top center;
-    padding-top: 226px;
-    text-align: center;
-    width: 48%;
-	margin-top: 20px;
-}
 
 .clearfix:after {
     visibility: hidden;
@@ -281,8 +313,8 @@ body {
 
 #footer.exterior {
     background-color: #D1D9CC;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #header div.interior {
@@ -297,16 +329,23 @@ body {
 }
 
 div.izq,div.der {
-    width: 48%;
+    width: 460px;
 }
 
 div.izq {
     float: left;
+    padding-right: 19px;
+    border-right-color: #DADADA;
+    border-right-style: solid;
+    border-right-width: 2px;
 }
 
 div.der {
     float: right;
-    padding: 2px 0 0 0px;
+}
+
+#menu-footer{
+    float: right;
 }
 
 #menu-footer h1 {
@@ -318,29 +357,29 @@ div.der {
 #menu-footer ul li {
     display: inline;
     list-style-type: none;
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 #menu-footer div.menu-menu-abajo-container #menu-menu-abajo
 {
-	padding-top: 5px;
+    padding-top: 5px;
 }
 
 #menu-footer ul li a {
-	text-decoration: none;
-	color: #175451;
-	font-size: 16px;
-	font-weight: bold;
-	border-right: 1px solid #175451;
-	padding-right: 5px;
+    text-decoration: none;
+    color: #175451;
+    font-size: 16px;
+    font-weight: bold;
+    border-right: 1px solid #175451;
+    padding-right: 5px;
 }
 #menu-footer ul li:last-child a {
-	text-decoration: none;
-	color: #175451;
-	font-size: 16px;
-	font-weight: bold;
-	padding-right: 5px;
-	border: none;
+    text-decoration: none;
+    color: #175451;
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 5px;
+    border: none;
 }
 
 div#info {
@@ -348,7 +387,7 @@ div#info {
     width: 630px;
     padding-right: 8px;
     border-right: 1px solid black;
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 div#social {
@@ -388,7 +427,7 @@ div#social {
 .sf-menu a {
     display: block;
     position: relative;
-	
+
 }
 
 .sf-menu li:hover ul,
@@ -428,7 +467,7 @@ ul.sf-menu li li li.sfHover ul {
     border-left: 1px solid #fff;
     text-decoration: none;
     padding: 5px 10px;
-	font-weight: bold;
+    font-weight: bold;
 }
 
 #user a {
@@ -522,13 +561,12 @@ li.sfHover > a > .sf-sub-indicator {
     text-align: justify;
 }
 
-body.page #pagina:before {
-    content: url(images/corazon.png	);
+#pagina.corazon:before {
+    content: url(images/corazon.png);
     width: 125px;
     height: 113px;
     float: left;
     margin-right: 10px;
-    margin-bottom: 10px;
 }
 
 #sidebar {
@@ -543,48 +581,12 @@ body.page #pagina:before {
     margin-right: 10px;
 }
 
-#tarjeta label,
-#theme-my-login label {
+#tarjeta label {
     color: #99CC00;
     font-weight: bold;
     font-size: 20px;
     vertical-align: middle;
 
-}
-
-#tarjeta input,
-#tarjeta textarea,
-.marco,
-#theme-my-login input[type="text"],
-#theme-my-login input[type="password"],
-#theme-my-login input[type="submit"],
-#theme-my-login {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border-color: #DADADA;
-    border-style: solid;
-    border-width: 2px;
-    padding: 3px;
-    margin-left: -5px;
-}
-
-#tarjeta #cuando,
-#tarjeta #donde,
-#tarjeta #user,
-#tarjeta #pass {
-    width: 48%;
-    float: left;
-}
-
-#tarjeta #cuando,
-#tarjeta #user {
-    float: left;
-}
-
-#tarjeta #donde,
-#tarjeta #pass {
-    float: right;
 }
 
 #tarjeta #cuando label,
@@ -593,38 +595,8 @@ body.page #pagina:before {
     display: block;
 }
 
-#tarjeta #eslabon input {
-    display: block;
-    float: left;
-    width: 48%;
-    margin-right: 10px;
-    font-size: 23px;
-}
-
-#tarjeta div.der div {
-    margin-bottom: 10px;
-}
-
-#tarjeta #regitrado label,
-#tarjeta #regitrado input {
-    width: 24%;
-    display: block;
-    float: left;
-}
-
 #tarjeta #eslabon p {
     margin: 0;
-}
-
-#tarjeta #cuando input,
-#tarjeta #donde input,
-#tarjeta #user input,
-#tarjeta #pass input,
-#theme-my-login input[type="text"],
-#theme-my-login input[type="password"],
-#tarjeta textarea {
-    display: block;
-    width: 100%;
 }
 
 #tarjeta div.izq p {
@@ -651,11 +623,12 @@ body.page #pagina:before {
     display: none;
 }
 
+#userhome h2.widgettitle,
 #sidebar h2.widgettitle {
     color: #99CC00;
     font-weight: bold;
     font-size: 19px;
-    background: url(images/mini.png) no-repeat 0 3px;
+    background: url(images/mini.png) no-repeat;
     padding-left: 20px;
 }
 
@@ -674,20 +647,6 @@ body.page #pagina:before {
     width: 50%;
     margin: auto;
     padding: 20px;
-}
-
-#theme-my-login label{
-    display: block;
-}
-
-#theme-my-login input#rememberme{ 
-    display: block;
-    float: left;
-}
-
-#theme-my-login #your-profile .form-table .description
-{
-	font-size: 14px;
 }
 
 div.post.historia div.meta p{
@@ -728,7 +687,7 @@ body.single div.post.historia div.texto div.sociable{
 
 #pagina #theme-my-login #your-profile textarea#description
 {
-	-moz-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
     border: 2px solid #DADADA;
     margin-left: -5px;
     padding: 3px;
@@ -736,12 +695,12 @@ body.single div.post.historia div.texto div.sociable{
 
 #theme-my-login table.form-table th
 {
-	vertical-align:top; 
+    vertical-align:top;
 }
 
 #theme-my-login select
 {
-	-moz-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
     border: 2px solid #DADADA;
     margin-left: -5px;
     padding: 3px;
@@ -749,42 +708,59 @@ body.single div.post.historia div.texto div.sociable{
 
 #login
 {
-margin-top:10px;
+    margin-top:10px;
     clear: both;
 }
 
 
 #login .tabs a{
-	-moz-border-radius: 5px 5px 0px 0px;
-	-webkit-border-radius: 5px 5px 0px 0px;
-	border-radius: 5px 5px 0px 0px;
-display:block;
-float: left;
-  background-color: #f0f0f0;
-  border: 1px solid #175451;
-  border-bottom-width: 0px;
-  padding: 4px 1em;
-  text-decoration: none;
-  margin-right:5px;
-  color:#175451;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+    display:block;
+    float: left;
+    background-color: #f0f0f0;
+    border: 1px solid #175451;
+    border-bottom-width: 0px;
+    padding: 4px 1em;
+    text-decoration: none;
+    margin-right:5px;
+    color:#175451;
 }
 
 #login .tabs a.selec{
-  background-color: #175451;
-  color: #fff;
+    background-color: #175451;
+    color: #fff;
 }
 
 #login .tab
 {
-  background-color: #fff;
-  border: 1px solid #175451;
-  padding: 1em;
-	-moz-border-radius: 0px 5px 5px 5px;
-	-webkit-border-radius: 0px 5px 5px 5px;
-	border-radius: 0px 5px 5px 5px;
+    background-color: #fff;
+    border: 1px solid #175451;
+    padding: 1em;
+    -moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
 }
 
 #login #crear,#login #anonimo
 {
-	display: none;
+    display: none;
+}
+
+.widget{
+    margin-bottom: 15px;
+}
+
+#historias {
+    max-height: 300px;
+    overflow: auto;
+}
+
+#pagina ul {
+    list-style: circle;
+}
+
+#pagina ul li {
+    margin-left: 20px;
 }

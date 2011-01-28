@@ -3,7 +3,7 @@ $i = 1; ?>
 <div id="cuerpo" class="exterior clearfix">
     <div id="archivo" class="interior clearfix">
         <div id="pagina" class="corazon">
-            <h1>Noticias</h1>
+            <h1>Historias Destacadas</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor hendrerit sem. Sed quam purus, lacinia in volutpat id, imperdiet vel justo. Curabitur consequat pellentesque orci, at luctus erat hendrerit ac. </p>
             <div id="historias" class="clearfix">
                 <?php while (have_posts ()) : the_post(); ?>

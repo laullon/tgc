@@ -7,9 +7,10 @@
         </div>
 
         <div class="izq">
-            <p>el deseo de la persona que comenzó esta cadena fué.</p>
+            <p>Esta cadena se inici&oacute; el <?php tgc_tarjeta_cuando()?> en <?php tgc_tarjeta_donde() ?></p>
+            <p>Y la motivaci&oacute;n fue:</p>
             <p class="marco"><?php tgc_tarjeta_deseo() ?></p>
-            <p>Todas estas personas han tenido en su mano esta misma tarjeta.</p>
+            <p>Todas estas histroias han sumado eslabones a esta cadena.</p>
             <div id="historias" class="marco"><?php if (!tgc_historias())
     echo "sin historias" ?></div>
             <h2>¡Todos ellos han puesto la ilusión en hacer de su acción el comienzo de algo grande!</h2>
@@ -17,20 +18,24 @@
 
         <div class="der">
             <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
-                <h2>Cuentanos quien eres:</h2>
-                <?php get_template_part("login_form") ?>
-                <h2>Cuentanos tu historia:</h2>
-                <div id="cuando">
-                    <label for="tgc_date">¿Cuando?</label>
-                    <input type="text" id="tgc_date" name="tgc_date" value="<?php echo $_POST['tgc_date'] ?>"/>
+                <div class="seccion">
+                    <h2>Cuentanos quien eres:</h2>
+                    <?php get_template_part("login_form") ?>
                 </div>
-                <div id="donde">
-                    <label for="tgc_place">¿Donde?</label>
-                    <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>"/>
-                </div>
-                <div id="historia">
-                    <label for="tgc_story">¿Cómo ha sido?</label>
-                    <textarea id="tgc_story" name="tgc_story" rows="3" cols="40"><?php echo $_POST['tgc_story'] ?></textarea>
+                <div class="seccion">
+                    <h2>Cu&eacute;ntanos tu historia:</h2>
+                    <div id="cuando">
+                        <label for="tgc_date">Cu&aacute;ndo</label>
+                        <input type="text" id="tgc_date" name="tgc_date" value="<?php echo $_POST['tgc_date'] ?>"/>
+                    </div>
+                    <div id="donde">
+                        <label for="tgc_place">D&oacute;nde</label>
+                        <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>XXX"/>
+                    </div>
+                    <div id="historia">
+                        <label for="tgc_story">Cómo ha sido</label>
+                        <textarea id="tgc_story" name="tgc_story" rows="3" cols="40"><?php echo $_POST['tgc_story'] ?></textarea>
+                    </div>
                 </div>
                 <input type="submit" value="Agregar"/>
             </form>
