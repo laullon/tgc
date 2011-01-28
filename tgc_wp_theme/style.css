@@ -95,6 +95,7 @@ div#pagina h3{
 
 h1,h2,h3,h4{
     margin-bottom: 10px;
+	line-height: normal;
 }
 
 div#pagina h2{
@@ -240,7 +241,7 @@ body #cuerpo {
 }
 
 #portada #sencillo {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 #portada #accion h1 {
@@ -752,7 +753,7 @@ body.single div.post.historia div.texto div.sociable{
     margin-bottom: 15px;
 }
 
-#historias {
+#tarjeta #historias {
     max-height: 300px;
     overflow: auto;
 }
