@@ -17,9 +17,9 @@
                 </div>
                 <div id="user_info">
                     <?php if (is_user_logged_in ()) : ?>
-                    <?php wp_loginout (); ?>
                     <?php $user = wp_get_current_user(); ?>
                         <a href="/registro/?action=profile">Hola <?php echo $user->display_name ?></a>
+                    <?php wp_loginout (); ?>
                     <?php else : ?>
                             <a href="/registro/?action=register">Registro</a>
                     <?php endif; ?>

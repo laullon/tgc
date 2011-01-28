@@ -4,7 +4,7 @@ $i = 1; ?>
     <div id="archivo" class="interior clearfix">
         <div id="pagina" class="corazon">
             <h1>Noticias</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor hendrerit sem. Sed quam purus, lacinia in volutpat id, imperdiet vel justo. Curabitur consequat pellentesque orci, at luctus erat hendrerit ac. </p>
+            <h3>Gracias a la prensa por cubrir nuestras noticias y por ayudarnos a difundir el mensaje.</h3>
             <div id="historias" class="clearfix">
                 <?php while (have_posts ()) : the_post(); ?>
                 <?php get_template_part("historia") ?>

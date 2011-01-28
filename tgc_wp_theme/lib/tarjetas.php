@@ -18,7 +18,7 @@ function tarjetas() {
 
 function tgc_es_tarjeta_valida() {
     global $wpdb, $tgc_tarjeta, $tarjetas_tabla;
-    $sql = $wpdb->prepare("SELECT cardCode,activa,deseo FROM {$tarjetas_tabla} WHERE cardCode='%s'", $tgc_tarjeta);
+    $sql = $wpdb->prepare("SELECT cardCode,activa,deseo,date,lugar FROM {$tarjetas_tabla} WHERE cardCode='%s'", $tgc_tarjeta);
     $t = $wpdb->get_row($sql);
     $GLOBALS['tarjeta'] = $t;
     return $tgc_tarjeta == $t->cardCode;
@@ -129,7 +129,7 @@ function tgc_tarjeta_deseo() {
 
 function tgc_tarjeta_cuando() {
     global $tarjeta;
-    echo $tarjeta->date;
+    echo mysql2date('j F Y',$tarjeta->date);
 }
 
 function tgc_tarjeta_donde() {

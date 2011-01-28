@@ -7,10 +7,11 @@
         </div>
 
         <div class="izq">
-            <p>Esta cadena se inici&oacute; el <?php tgc_tarjeta_cuando()?> en <?php tgc_tarjeta_donde() ?></p>
-            <p>Y la motivaci&oacute;n fue:</p>
+            <label>Esta cadena se inici&oacute; el:</label>
+            <p class="marco"><?php tgc_tarjeta_cuando()?> en <?php tgc_tarjeta_donde() ?></p>
+            <label>La motivaci&oacute;n fue:</label>
             <p class="marco"><?php tgc_tarjeta_deseo() ?></p>
-            <p>Todas estas histroias han sumado eslabones a esta cadena.</p>
+            <label>Estos son los eslabones de la cadena</label>
             <div id="historias" class="marco"><?php if (!tgc_historias())
     echo "sin historias" ?></div>
             <h2>¡Todos ellos han puesto la ilusión en hacer de su acción el comienzo de algo grande!</h2>
@@ -19,7 +20,6 @@
         <div class="der">
             <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
                 <div class="seccion">
-                    <h2>Cuentanos quien eres:</h2>
                     <?php get_template_part("login_form") ?>
                 </div>
                 <div class="seccion">
@@ -30,7 +30,7 @@
                     </div>
                     <div id="donde">
                         <label for="tgc_place">D&oacute;nde</label>
-                        <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>XXX"/>
+                        <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>"/>
                     </div>
                     <div id="historia">
                         <label for="tgc_story">Cómo ha sido</label>

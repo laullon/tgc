@@ -3,7 +3,7 @@
 <div id="cuerpo" class="exterior clearfix">
     <div class="interior clearfix">
         <div id="pagina">
-            <? if (isset($wp_query->query_vars['tgc_gracias'])) : ?>
+            <? if (isset($wp_query->query_vars['tgc_gracias']) && (!is_user_logged_in())) : ?>
                 <div class="gracias">
                     <h2>Gracias por enviar tu historia</h2>
                     <p class="tarjeta">Aparecerá en el historial de la tarjeta: <a href="/tarjeta/<?php echo get_post_meta($post->ID, 'tarjeta', true) ?>"><?php echo get_post_meta($post->ID, 'tarjeta', true) ?></a></p>

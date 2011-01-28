@@ -95,7 +95,7 @@ div#pagina h3{
 
 h1,h2,h3,h4{
     margin-bottom: 10px;
-	line-height: normal;
+    line-height: normal;
 }
 
 div#pagina h2{
@@ -238,6 +238,7 @@ body #cuerpo {
 #portada ul li {
     margin: 0 0 0 4px;
     font-size: 16px;
+    line-height: 1.2em;
 }
 
 #portada #sencillo {
@@ -587,7 +588,6 @@ li.sfHover > a > .sf-sub-indicator {
     font-weight: bold;
     font-size: 20px;
     vertical-align: middle;
-
 }
 
 #tarjeta #cuando label,
@@ -613,6 +613,7 @@ li.sfHover > a > .sf-sub-indicator {
 #tarjeta div.top p {
     font-size: 1.5em;
     margin: 0 0 20px;
+    line-height: 1.2em;
 }
 
 #tarjeta div.top h1 {
@@ -758,10 +759,34 @@ body.single div.post.historia div.texto div.sociable{
     overflow: auto;
 }
 
+#tarjeta #historias div.post.par
+{
+    background-color: #F0F0F0;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
 #pagina ul {
     list-style: circle;
 }
 
 #pagina ul li {
     margin-left: 20px;
+}
+
+#user_info{
+    padding: 5px 10px;
+    float: right;
+}
+
+#user_info a{
+    color: white;
+}
+
+#tarjeta ul li {
+    list-style-type: circle;
+}
+
+#pagina ul{
+    margin-bottom: 10px;
 }
