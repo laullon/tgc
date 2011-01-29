@@ -372,15 +372,15 @@ div.der {
     color: #175451;
     font-size: 16px;
     font-weight: bold;
-    border-right: 1px solid #175451;
-    padding-right: 5px;
+    border-left: 1px solid #175451;
+    padding-left: 5px;
 }
-#menu-footer ul li:last-child a {
+#menu-footer ul li:first-child a {
     text-decoration: none;
     color: #175451;
     font-size: 16px;
     font-weight: bold;
-    padding-right: 5px;
+    padding-left: 5px;
     border: none;
 }
 
@@ -563,13 +563,7 @@ li.sfHover > a > .sf-sub-indicator {
     text-align: justify;
 }
 
-#pagina.corazon:before {
-    content: url(images/corazon.png);
-    width: 125px;
-    height: 113px;
-    float: left;
-    margin-right: 10px;
-}
+
 
 #sidebar {
     float: right;
@@ -606,7 +600,7 @@ li.sfHover > a > .sf-sub-indicator {
 }
 
 #tarjeta div.top {
-    background: url(images/corazon.png	) no-repeat;
+    background: url(images/corazon.jpg	) no-repeat;
     padding-left: 135px;
 }
 
@@ -789,4 +783,13 @@ body.single div.post.historia div.texto div.sociable{
 
 #pagina ul{
     margin-bottom: 10px;
+}
+
+#pagina .heart
+{
+	background: url(images/corazon.jpg) no-repeat;
+	padding-right: 125px;
+	padding-bottom: 113px;
+	float: left;
+	margin-right: 10px;
 }

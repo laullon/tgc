@@ -3,6 +3,7 @@ $i = 1; ?>
 <div id="cuerpo" class="exterior clearfix">
     <div id="archivo" class="interior clearfix">
         <div id="pagina" class="corazon">
+		<div class="heart"></div>
             <h1>Noticias</h1>
             <h3>Gracias a la prensa por cubrir nuestras noticias y por ayudarnos a difundir el mensaje.</h3>
             <div id="historias" class="clearfix">

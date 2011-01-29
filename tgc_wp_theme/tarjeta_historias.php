@@ -18,10 +18,10 @@
         </div>
 
         <div class="der">
+            <div class="seccion">
+                <?php get_template_part("login_form") ?>
+            </div>
             <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
-                <div class="seccion">
-                    <?php get_template_part("login_form") ?>
-                </div>
                 <div class="seccion">
                     <h2>Cu&eacute;ntanos tu historia:</h2>
                     <div id="cuando">

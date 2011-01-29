@@ -3,6 +3,7 @@
 <div id="cuerpo" class="exterior clearfix">
     <div class="interior clearfix">
         <div id="pagina" class="corazon">
+		<div class="heart"></div>
             <?php while (have_posts ()) : the_post(); ?>
             <?php the_content(); ?>
             <?php endwhile; ?>
