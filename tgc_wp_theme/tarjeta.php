@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $gracias = $wp_query->query_vars['tgc_gracias'] == "true"; ?>
 <div id="cuerpo" class="exterior clearfix">
     <div id="tarjeta" class="interior clearfix">
         <div class="top">
@@ -19,10 +20,10 @@
             <p>Si necesitas inspiración, puedes leer más en el menu <a href="http://tgc.laullon.com/inspiracion/">Inspiraci&oacute;n</a> o ver lo que ha sucedido a muchas otras personas en <a href="http://tgc.laullon.com/category/historias-destacadas/">Historias</a>. Verás que pronto se te ocurrirán más y más oportunidades para ayudar a los demás y generar sonrisas.</p>
             <h3>¡Empezar una cadena de buenas acciones es empezar a cambiar el mundo a mejor!</h3>
         </div>
-
-        <div class="der">
-            <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
-                <div class="seccion">
+        <?php if (!$gracias) : ?>
+            <div class="der">
+                <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
+                    <div class="seccion">
                     <?php get_template_part("login_form") ?>
                 </div>
                 <div id="cuentanos" class="seccion">
@@ -44,9 +45,31 @@
                     <textarea id="tgc_deseo" name="tgc_deseo" rows="3" cols="40"></textarea>
                 </div>
                 <input type="submit" value="Agregar"/>
-                <h3>¡Gracias por poner el primer eslabón!</h3>
             </form>
         </div>
-    </div>
-</div>
+        <?php else: ?>
+                        <div class="der">
+                            <h2>¡Gracias por poner el primer eslabón!</h2>
+                            <div id="cuentanos" class="seccion">
+                                <label for="tgc_cuentanos">Cu&eacute;ntanos cómo la has recibido</label>
+                                <div class="marco"><?php tgc_tarjeta_cuentanos() ?></div>
+                            </div>
+                            <div class="seccion clearfix">
+                                <div id="cuando">
+                                    <label for="tgc_date">Cu&aacute;ndo</label>
+                                    <div class="marco"><?php tgc_tarjeta_cuando() ?></div>
+                                </div>
+                                <div id="donde">
+                                    <label for="tgc_place">D&oacute;nde</label>
+                                    <div class="marco"><?php tgc_tarjeta_donde() ?></div>
+                                </div>
+                            </div>
+                            <div id="deseo" class="seccion">
+                                <label for="tgc_deseo">Qu&eacute; te motiva a empezar esta cadena</label>
+                                <div class="marco"><?php tgc_tarjeta_deseo() ?></div>
+                            </div>
+                        </div>
+        <?php endif; ?>
+                    </div>
+                </div>
 <?php get_footer(); ?>

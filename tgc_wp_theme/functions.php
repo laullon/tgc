@@ -34,10 +34,11 @@ function tgc_activate() {
 add_action('generate_rewrite_rules', 'tgc_rewrite_rules');
 
 function tgc_rewrite_rules($wp_rewrite) {
-    $br = array('tarjeta/(.*)$' => 'index.php?tgc_tarjeta=$matches[1]');
-    $br2 = array('historia/(\d*)/gracias$' => 'index.php?p=$matches[1]&tgc_gracias=true');
-    $br3 = array('historia/(\d*)$' => 'index.php?p=$matches[1]');
-    $wp_rewrite->rules = $br + $br2 + $br3 + $wp_rewrite->rules;
+    $br1 = array('tarjeta/([^/]*)/gracias$' => 'index.php?tgc_tarjeta=$matches[1]&tgc_gracias=true');
+    $br2 = array('tarjeta/(.*)$' => 'index.php?tgc_tarjeta=$matches[1]');
+    $br3 = array('historia/(\d*)/gracias$' => 'index.php?p=$matches[1]&tgc_gracias=true');
+    $br4 = array('historia/(\d*)$' => 'index.php?p=$matches[1]');
+    $wp_rewrite->rules = $br1 + $br2 + $br3 + $br4 + $wp_rewrite->rules;
 }
 
 add_filter('query_vars', 'tgc_query_vars');
@@ -52,7 +53,6 @@ add_action('template_redirect', 'tgc_template_redirect');
 
 function tgc_template_redirect() {
     global $wp_query;
-
     if (isset($wp_query->query_vars['tgc_tarjeta'])) {
         tarjetas();
     }

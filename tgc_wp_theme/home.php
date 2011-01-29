@@ -5,9 +5,6 @@
             <h3>¿Has recibido una tarjeta?</h3>
             <p>Introduce el código y descubre su historia</p>
             <input type="textbox" name="tarjeta"/>
-            <?php if ($_REQUEST['error'] == true) : ?>
-            error
-            <?php endif; ?>
                 <a id="tarjeta" class="ir" href="/tarjeta/">ir &gt;</a>
             </div>
             <div id="portada" class="der">

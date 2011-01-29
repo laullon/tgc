@@ -3,9 +3,10 @@
 function tarjetas() {
     global $wp_query, $tarjeta;
     $GLOBALS['tgc_tarjeta'] = $wp_query->query_vars['tgc_tarjeta'];
+    $gracias=$wp_query->query_vars['tgc_gracias']=="true";
     tgc_guardar_historia();
     if (tgc_es_tarjeta_valida ()) {
-        if ($tarjeta->activa) {
+        if ($tarjeta->activa && !$gracias) {
             get_template_part('tarjeta_historias');
         } else {
             get_template_part('tarjeta');
@@ -18,7 +19,7 @@ function tarjetas() {
 
 function tgc_es_tarjeta_valida() {
     global $wpdb, $tgc_tarjeta, $tarjetas_tabla;
-    $sql = $wpdb->prepare("SELECT cardCode,activa,deseo,date,lugar FROM {$tarjetas_tabla} WHERE cardCode='%s'", $tgc_tarjeta);
+    $sql = $wpdb->prepare("SELECT * FROM {$tarjetas_tabla} WHERE cardCode='%s'", $tgc_tarjeta);
     $t = $wpdb->get_row($sql);
     $GLOBALS['tarjeta'] = $t;
     return $tgc_tarjeta == $t->cardCode;
@@ -94,7 +95,7 @@ function tgc_guardar_historia() {
         $deseo = $_POST['tgc_deseo'];
         $sql = $wpdb->prepare("UPDATE {$tarjetas_tabla} SET activa=1,cuentanos='%s',date='%s',lugar='%s',deseo='%s',user_id='{$user_id}' WHERE cardCode='{$tgc_tarjeta}'", $cuentanos, $date, $lugar, $deseo);
         $wpdb->query($sql);
-        wp_redirect("/tarjeta/{$tgc_tarjeta}");
+        wp_redirect("/tarjeta/{$tgc_tarjeta}/gracias/");
         die;
     }
 }
@@ -125,6 +126,11 @@ function tgc_get_numero_targeta() {
 function tgc_tarjeta_deseo() {
     global $tarjeta;
     echo $tarjeta->deseo;
+}
+
+function tgc_tarjeta_cuentanos() {
+    global $tarjeta;
+    echo $tarjeta->cuentanos;
 }
 
 function tgc_tarjeta_cuando() {

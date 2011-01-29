@@ -137,6 +137,14 @@ textarea{
     font-size: 16px;
 }
 
+input[type="submit"] {
+    background: url(images/botonverde.png) no-repeat;
+    border: none;
+    width: 230px;
+    height: 80px;
+}
+
+
 .marco{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -196,7 +204,7 @@ textarea{
     margin-top: 20px;
 }
 
-#codigos input {
+#codigos input,#anonimo input {
     float: left;
     font-size: 26px;
     width: 359px;
@@ -211,11 +219,25 @@ textarea{
     padding: 0 10px;
 }
 
-#codigos a.ir {
+#codigos a.ir,
+#historia.ir {
+    background: url(images/flechaverde.png) no-repeat scroll top right;
     display: block;
-    margin-top: 25px;
-    text-align: right;
+    width: 49px;
+    height: 49px;
+    margin-top: 13px;
+    text-indent: -2158px;
 }
+
+#codigos a.ir{
+    margin-left: 406px;
+}
+
+#historia.ir {
+    margin-left: 392px;
+    margin-top: 18px;
+}
+
 
 .submenu a {
     padding: 0px !important;
@@ -400,8 +422,8 @@ div#info {
 }
 
 #social #iconos img{
-	margin-right: 15px;
-	margin-top: 5px;
+    margin-right: 15px;
+    margin-top: 5px;
 }
 
 .sf-menu, .sf-menu * {
@@ -794,10 +816,16 @@ body.single div.post.historia div.texto div.sociable{
 
 #pagina .heart
 {
-	background: url(images/corazon.jpg) no-repeat;
-	padding-right: 125px;
-	padding-bottom: 113px;
-	float: left;
-	margin-right: 10px;
+    background: url(images/corazon.jpg) no-repeat;
+    padding-right: 125px;
+    padding-bottom: 113px;
+    float: left;
+    margin-right: 10px;
 }
+
+#error div.interior h1 {
+    color: red;
+    float: left;
+}
+
 

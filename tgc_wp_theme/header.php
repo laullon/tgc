@@ -23,17 +23,24 @@
                     <?php else : ?>
                             <a href="/registro/?action=register">Registro</a>
                     <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div id="social" class="exterior">
-            <div class="interior">
-                <div id="iconos">
-                    <a href="http://www.twitter.com/"><img src="/wp-content/themes/tgc_wp_theme/images/twitter.png" width="64" height="64" alt="sigue the good chain en Twitter"/></a>
-                    <a id="facebook" href="http://facebook.com"><img src="/wp-content/themes/tgc_wp_theme/images/facebook.png" width="64" height="64" alt="sigue the good chain en facebook"/></a>
+                <div id="social" class="exterior">
+                    <div class="interior">
+                        <div id="iconos">
+                            <a href="http://www.twitter.com/"><img src="/wp-content/themes/tgc_wp_theme/images/twitter.png" width="64" height="64" alt="sigue the good chain en Twitter"/></a>
+                            <a id="facebook" href="http://facebook.com"><img src="/wp-content/themes/tgc_wp_theme/images/facebook.png" width="64" height="64" alt="sigue the good chain en facebook"/></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+        <?php if ($_REQUEST['error'] == true) : ?>
+                <div id="error" class="exterior">
+                    <div class="interior">
+                        <h1>Tarjeta o Historia no encotrada</h1>
+                    </div>
+                </div>
+        <?php endif; ?>
 
 
 
