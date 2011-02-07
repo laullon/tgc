@@ -17,7 +17,7 @@
                 <li>Mándale una entradas a un evento a un amigo de forma anónima</li>
             </ul>
             <p>Entrégale a esa persona esta tarjeta para que ella a su vez se inspire a hacer otra buena acción y siga la cadena.</p>
-            <p>Si necesitas inspiración, puedes leer más en el menu <a href="http://tgc.laullon.com/inspiracion/">Inspiraci&oacute;n</a> o ver lo que ha sucedido a muchas otras personas en <a href="http://tgc.laullon.com/category/historias-destacadas/">Historias</a>. Verás que pronto se te ocurrirán más y más oportunidades para ayudar a los demás y generar sonrisas.</p>
+            <p>Si necesitas inspiración, puedes leer más en el menu <a href="/inspiracion/">Inspiraci&oacute;n</a> o ver lo que ha sucedido a muchas otras personas en <a href="/category/historias-destacadas/">Historias</a>. Verás que pronto se te ocurrirán más y más oportunidades para ayudar a los demás y generar sonrisas.</p>
             <h3>¡Empezar una cadena de buenas acciones es empezar a cambiar el mundo a mejor!</h3>
         </div>
         <?php if (!$gracias) : ?>

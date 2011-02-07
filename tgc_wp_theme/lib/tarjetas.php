@@ -135,7 +135,7 @@ function tgc_tarjeta_cuentanos() {
 
 function tgc_tarjeta_cuando() {
     global $tarjeta;
-    echo mysql2date('j F Y',$tarjeta->date);
+    echo mysql2date(get_option('date_format'),$tarjeta->date);
 }
 
 function tgc_tarjeta_donde() {

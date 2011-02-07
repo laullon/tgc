@@ -1,27 +1,11 @@
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
-/* @override http://tgc.laullon.com/wp-content/themes/tgc_wp_theme/style.css */
-
 /*
 Theme Name: The Good Chain
 Theme URI: http://thegoodchain.org/
 Description: The Good Chain WordPress Theme.
 Author: German Laullon
 Version: 1.0
-License:
-License URI:
+License: GPLv2
+License URI: http://wordpress.org/about/gpl/
 */
 
 /* v1.0 | 20080212 */
@@ -137,12 +121,34 @@ textarea{
     font-size: 16px;
 }
 
-input[type="submit"] {
+-input[type="submit"] {
     background: url(images/botonverde.png) no-repeat;
     border: none;
+    color: white;
+    font-family: 'Eurostile Next W02 Regular Ext';
+    font-size: 18px;
+    height: 62px;
+    padding-left: 40px;
+    padding-top: 19px;
+    text-align: left;
     width: 230px;
-    height: 80px;
 }
+
+input[type="submit"] {
+    background: url(images/botonverde2.png) no-repeat;
+    border: none;
+    color: white;
+    font-family: 'Eurostile Next W02 Regular Ext';
+    font-size: 18px;
+    height: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    margin-top:10px;
+    text-align: left;
+    width: 124px;
+}
+
+
 
 
 .marco{
@@ -201,7 +207,7 @@ input[type="submit"] {
     background: #ffffff url(images/corazongde.png) no-repeat top center;
     padding-top: 226px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 #codigos input,#anonimo input {
@@ -360,6 +366,9 @@ div.izq,div.der {
 
 div.izq {
     float: left;
+}
+
+-div.izq{
     padding-right: 19px;
     border-right-color: #DADADA;
     border-right-style: solid;

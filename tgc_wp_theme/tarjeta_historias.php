@@ -8,7 +8,7 @@
 
         <div class="izq">
             <label>Esta cadena se inici&oacute; el:</label>
-            <p class="marco"><?php tgc_tarjeta_cuando()?> en <?php tgc_tarjeta_donde() ?></p>
+            <p class="marco"><?php tgc_tarjeta_cuando() ?> en <?php tgc_tarjeta_donde() ?></p>
             <label>La motivaci&oacute;n fue:</label>
             <p class="marco"><?php tgc_tarjeta_deseo() ?></p>
             <label>Estos son los eslabones de la cadena</label>
@@ -24,13 +24,15 @@
             <form action="/tarjeta/<?php tgc_numero_targeta() ?>/"  method="post" name="tgc_tarjeta_form">
                 <div class="seccion">
                     <h2>Cu&eacute;ntanos tu historia:</h2>
-                    <div id="cuando">
-                        <label for="tgc_date">Cu&aacute;ndo</label>
-                        <input type="text" id="tgc_date" name="tgc_date" value="<?php echo $_POST['tgc_date'] ?>"/>
-                    </div>
-                    <div id="donde">
-                        <label for="tgc_place">D&oacute;nde</label>
-                        <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>"/>
+                    <div class="seccion clearfix">
+                        <div id="cuando">
+                            <label for="tgc_date">Cu&aacute;ndo</label>
+                            <input type="text" id="tgc_date" name="tgc_date" value="<?php echo $_POST['tgc_date'] ?>"/>
+                        </div>
+                        <div id="donde">
+                            <label for="tgc_place">D&oacute;nde</label>
+                            <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>"/>
+                        </div>
                     </div>
                     <div id="historia">
                         <label for="tgc_story">Cómo ha sido</label>

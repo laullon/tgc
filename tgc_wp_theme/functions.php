@@ -1,6 +1,6 @@
 <?php
 
-define(BBDD_VERISON, "1");
+define(BBDD_VERISON, "1.1");
 require_once 'lib/tarjetas.php';
 require_once 'lib/widgets.php';
 require_once 'lib/historias.php';
@@ -60,4 +60,14 @@ function tgc_template_redirect() {
 
 add_action('init', 'register_my_menus');
 add_action('init', 'preparar_menu');
+
+function tgc_about() {
+    if (function_exists("dbenini_plugins_list")) {
+        $pf = "<a href='#PluginURI#' title='#Title#'>#Title#</a> by #Author#.&nbsp-&nbsp";
+        echo '<div class="copyrightFooter">';
+        $list = dbenini_plugins_list($pf);
+        echo $list;
+        echo '</div>';
+    }
+}
 ?>

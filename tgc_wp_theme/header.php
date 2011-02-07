@@ -6,7 +6,6 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
         <?php wp_head(); ?>
         <link rel="shortcut icon" href="/wp-content/themes/tgc_wp_theme/favicon.ico"/>
-        <script type="text/javascript" src="http://fast.fonts.com/jsapi/d25e522c-556d-4cca-9a72-5b41faa634dc.js"></script>
     </head>
 
     <body <?php body_class(); ?>>
@@ -29,17 +28,17 @@
                 <div id="social" class="exterior">
                     <div class="interior">
                         <div id="iconos">
-                            <a href="http://www.twitter.com/"><img src="/wp-content/themes/tgc_wp_theme/images/twitter.png" width="64" height="64" alt="sigue the good chain en Twitter"/></a>
-                            <a id="facebook" href="http://facebook.com"><img src="/wp-content/themes/tgc_wp_theme/images/facebook.png" width="64" height="64" alt="sigue the good chain en facebook"/></a>
+                            <a href="http://twitter.com/germantgc" target="_new"><img src="/wp-content/themes/tgc_wp_theme/images/twitter.png" width="64" height="64" alt="sigue the good chain en Twitter"/></a>
+                            <a id="facebook" href="http://www.facebook.com/pages/thegoodchain/112081492169687" target="_new"><img src="/wp-content/themes/tgc_wp_theme/images/facebook.png" width="64" height="64" alt="sigue the good chain en facebook"/></a>
                         </div>
                     </div>
                 </div>
         <?php if ($_REQUEST['error'] == true) : ?>
-                <div id="error" class="exterior">
-                    <div class="interior">
-                        <h1>Tarjeta o Historia no encotrada</h1>
-                    </div>
-                </div>
+                                <div id="error" class="exterior">
+                                    <div class="interior">
+                                        <h1>Tarjeta o Historia no encontrada</h1>
+                                    </div>
+                                </div>
         <?php endif; ?>
 
 

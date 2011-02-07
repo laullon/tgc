@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="cuerpo" class="exterior clearfix">
-    <div class="interior clearfix">
+    <div class="interior clearfix fondo">
         <div id="codigos" class="izq">
             <h3>¿Has recibido una tarjeta?</h3>
             <p>Introduce el código y descubre su historia</p>
@@ -20,8 +20,8 @@
                     </div>
                     <div id="accion" class="seccion">
                         <h1>Una pequeña acción</h1>
-                        <h2>puede cambiar al mundo</h2>
-                        <h2>si se hace desde el corazón</h2>
+                        <h2>puede cambiar el mundo</h2>
+                        <h2>si se hace con el corazón</h2>
                     </div>
                     <div class="seccion">
                         <p class="usuCadena">¿Ya eres usuario y quieres seguir tus Tarjetas/Historias?</p>

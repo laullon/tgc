@@ -1,4 +1,5 @@
 var jq = jQuery.noConflict();
+
 jq(document).ready(function(){
     jq("ul#menu-menu-arriba").superfish();
 
@@ -39,5 +40,9 @@ jq(document).ready(function(){
         maxDate:"+0d"
     });
 
+    jq('form').submit(function(){
+        jq(':submit', this).toggle();
+        jq(this).append("enviando...");
+    });
 
 });

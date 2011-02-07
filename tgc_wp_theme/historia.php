@@ -6,7 +6,7 @@ $tarjetaID = get_post_meta($post->ID, 'tarjeta', true);
         <h1 class="titulo"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
         <div class="meta">
             <p class="fecha">
-                <?php the_time('F jS, Y') ?>
+                <?php the_date() ?>
             </p>
             <?php if ($tarjetaID) : ?>
                     <p class="tarjeta">Tarjeta: <a href="/tarjeta/<?php echo $tarjetaID ?>"><?php echo $tarjetaID ?></a></p>
