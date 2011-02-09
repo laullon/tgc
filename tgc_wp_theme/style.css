@@ -116,8 +116,8 @@ textarea{
     border-style: solid;
     border-width: 2px;
     display: block;
-    width: 100%;
-    padding: 5px 0px;
+    width: 96%;
+    padding: 5px;
     font-size: 16px;
 }
 
@@ -140,9 +140,10 @@ input[type="submit"] {
     color: white;
     font-family: 'Eurostile Next W02 Regular Ext';
     font-size: 18px;
+	
     height: 30px;
     padding-left: 14px;
-    padding-top: 5px;
+    padding-top: 0px;
     margin-top:10px;
     text-align: left;
     width: 124px;

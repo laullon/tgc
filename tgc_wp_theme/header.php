@@ -28,7 +28,7 @@
                 <div id="social" class="exterior">
                     <div class="interior">
                         <div id="iconos">
-                            <a href="http://twitter.com/germantgc" target="_new"><img src="/wp-content/themes/tgc_wp_theme/images/twitter.png" width="64" height="64" alt="sigue the good chain en Twitter"/></a>
+                            <a href="http://twitter.com/thegoodchain" target="_new"><img src="/wp-content/themes/tgc_wp_theme/images/twitter.png" width="64" height="64" alt="sigue the good chain en Twitter"/></a>
                             <a id="facebook" href="http://www.facebook.com/pages/thegoodchain/112081492169687" target="_new"><img src="/wp-content/themes/tgc_wp_theme/images/facebook.png" width="64" height="64" alt="sigue the good chain en facebook"/></a>
                         </div>
                     </div>

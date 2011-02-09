@@ -11,7 +11,7 @@
                 <a class="tab_control" href="#anonimo">An&oacute;nimo</a>
             </div>
             <div id="regitrado" class="tab clearfix">
-                <p>¿ya estás registrado?</p>
+                <p>¿Ya estás registrado?</p>
                 <form action="/registro/?action=login" method="post">
                     <div id="user">
                         <label for="tgc_user">Nombre</label>
@@ -30,7 +30,7 @@
                 </form>
             </div>
             <div id="crear" class="tab clearfix">
-                <p>registrate para seguir tus tarjetas e historias:</p>
+                <p>Registrate para seguir tus tarjetas e historias:</p>
                 <a href="/registro/?action=register">Formulario de Registro</a>
             </div>
             <div id="anonimo" class="tab clearfix">
