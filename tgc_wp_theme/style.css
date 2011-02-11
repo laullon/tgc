@@ -737,8 +737,20 @@ body.single div.post.historia div.texto div.sociable{
 {
     -moz-border-radius: 5px 5px 5px 5px;
     border: 2px solid #DADADA;
-    margin-left: -5px;
+    margin-left: 0px;
     padding: 3px;
+}
+
+#theme-my-login #your-profile .form-table th label
+{
+	margin-top: 8px !important;
+	float: right;
+	margin-right: 10px;
+}
+
+#theme-my-login #your-profile  h3
+{
+	margin: 13px 0 5px 0 ;
 }
 
 #login
