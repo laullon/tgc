@@ -75,13 +75,13 @@ function tgc_guardar_historia() {
                     'post_title' => "Historia",
                     'post_content' => $_POST['tgc_story'],
                     'post_category' => array(get_cat_ID('Historias')),
-                    'post_date' => "{$y}-{$m}-{$d} 00:00:00",
                     'post_status' => 'publish'
                 ));
         wp_update_post(array(
             'ID' => $post_id,
             'post_title' => "Historia " . $post_id));
         add_post_meta($post_id, "tarjeta", $tgc_tarjeta, TRUE);
+        add_post_meta($post_id, "fecha", "{$y}-{$m}-{$d} 00:00:00", TRUE);
         add_post_meta($post_id, "lugar", $_POST['tgc_place'], TRUE);
 
         $sql = $wpdb->prepare("UPDATE {$tarjetas_tabla} SET cardModified=NOW() WHERE cardCode='{$tgc_tarjeta}'");
