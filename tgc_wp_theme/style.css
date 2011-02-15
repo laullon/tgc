@@ -850,4 +850,61 @@ body.single div.post.historia div.texto div.sociable{
     float: left;
 }
 
+img.aligncenter {
+	display: block;
+	margin: auto;
+}
+
+img.alignleft {
+	float: left;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+img.alignright {
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+img.alignnone {
+	float: none;
+}
+
+div.wp-caption.alignleft {
+	float: left;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+div.wp-caption.alignright {
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+img.size-full {
+	max-width: 680px;
+}
+
+img.size-thumbnail {
+	padding: 5px;
+	border: 1px solid #9C0;
+	margin: 5px;
+}
+
+div.wp-caption.alignnone {
+	float: none;
+}
+
+div.wp-caption.aligncenter {
+	margin: auto;
+}
+
+div.wp-caption {
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #9C0;
+}
+
 
