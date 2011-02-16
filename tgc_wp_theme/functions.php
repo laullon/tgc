@@ -4,6 +4,7 @@ define(BBDD_VERISON, "1.1");
 require_once 'lib/tarjetas.php';
 require_once 'lib/widgets.php';
 require_once 'lib/historias.php';
+require_once 'lib/api.php';
 
 function register_my_menus() {
     register_nav_menus(

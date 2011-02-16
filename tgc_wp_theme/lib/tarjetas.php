@@ -19,10 +19,16 @@ function tarjetas() {
 
 function tgc_es_tarjeta_valida() {
     global $wpdb, $tgc_tarjeta, $tarjetas_tabla;
-    $sql = $wpdb->prepare("SELECT * FROM {$tarjetas_tabla} WHERE cardCode='%s'", $tgc_tarjeta);
-    $t = $wpdb->get_row($sql);
+    $t = tgc_cargar_tarjeta($tgc_tarjeta);
     $GLOBALS['tarjeta'] = $t;
     return $tgc_tarjeta == $t->cardCode;
+}
+
+function tgc_cargar_tarjeta($tgc_tarjeta){
+    global $wpdb,$tarjetas_tabla;
+    $sql = $wpdb->prepare("SELECT * FROM {$tarjetas_tabla} WHERE cardCode='%s'", $tgc_tarjeta);
+    $t = $wpdb->get_row($sql);
+    return $t;
 }
 
 function tgc_lista_tarjetas_usuario() {
@@ -100,11 +106,16 @@ function tgc_guardar_historia() {
     }
 }
 
+function tgc_get_historias_ids($t_id) {
+    global $wpdb;
+    $sql = $wpdb->prepare("SELECT post_id FROM wp_postmeta WHERE meta_key='tarjeta' AND meta_value='%s'", $t_id);
+    return $wpdb->get_col($sql);
+}
+
 function tgc_historias() {
     global $wpdb, $tgc_tarjeta;
     $t_id = htmlspecialchars($tgc_tarjeta);
-    $sql = $wpdb->prepare("SELECT post_id FROM wp_postmeta WHERE meta_key='tarjeta' AND meta_value='%s'", $t_id);
-    $historias_ids = $wpdb->get_col($sql);
+    $historias_ids = tgc_get_historias_ids($t_id);
     query_posts(array('post__in' => $historias_ids, 'posts_per_page' => '-1'));
     if (count($historias_ids) > 0)
         if (have_posts ()) {
