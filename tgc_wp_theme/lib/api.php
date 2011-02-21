@@ -38,6 +38,8 @@ function tgc_api_main() {
         tgc_api_cmd_test();
     } else if ($cmd === "login") {
         tgc_api_cmd_login();
+    } else if ($cmd === "user") {
+        tgc_api_cmd_user();
     } else {
         sendResponse(500, "cmd='{$cmd}'");
     }
@@ -75,16 +77,32 @@ function tgc_api_cmd_login() {
         $creds = array();
         $creds['user_login'] = $_POST['user'];
         $creds['user_password'] = $_POST['pass'];
-        $creds['remember'] = false;
+        $creds['remember'] = true;
         $user = wp_signon($creds, false);
         if (is_wp_error($user)) {
             $err = preg_replace("#(<[^>]*>)#", "", $user->get_error_message());
             sendResponse(500, $err);
         } else {
-            sendResponse(200, array("id" => $user->data->ID,"user_login" => $user->data->user_login));
+            sendResponse(200, array("id" => $user->data->ID, "user_login" => $user->data->user_login));
         }
     } else {
         sendResponse(500, "solo POST");
+    }
+}
+
+function tgc_api_cmd_user() {
+    global $wp_query;
+    $acction = $wp_query->query_vars['tgc_id']; /// XXX igual no lo necesito
+    if ($acction === "info") {
+        if(is_user_logged_in ()){
+            $user_info->tarjetas=tgc_tarjetas_usuario();
+            $user_info->historias=tgc_historias_usuario();
+            sendResponse(200, $user_info);
+        }else{
+            sendResponse(500, "Error: Sesion caducada");
+        }
+    } else {
+        sendResponse(500, $acction);
     }
 }
 

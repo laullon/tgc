@@ -3,7 +3,7 @@
 function tarjetas() {
     global $wp_query, $tarjeta;
     $GLOBALS['tgc_tarjeta'] = $wp_query->query_vars['tgc_tarjeta'];
-    $gracias=$wp_query->query_vars['tgc_gracias']=="true";
+    $gracias = $wp_query->query_vars['tgc_gracias'] == "true";
     tgc_guardar_historia();
     if (tgc_es_tarjeta_valida ()) {
         if ($tarjeta->activa && !$gracias) {
@@ -24,20 +24,25 @@ function tgc_es_tarjeta_valida() {
     return $tgc_tarjeta == $t->cardCode;
 }
 
-function tgc_cargar_tarjeta($tgc_tarjeta){
-    global $wpdb,$tarjetas_tabla;
+function tgc_cargar_tarjeta($tgc_tarjeta) {
+    global $wpdb, $tarjetas_tabla;
     $sql = $wpdb->prepare("SELECT * FROM {$tarjetas_tabla} WHERE cardCode='%s'", $tgc_tarjeta);
     $t = $wpdb->get_row($sql);
     return $t;
 }
 
-function tgc_lista_tarjetas_usuario() {
+function tgc_tarjetas_usuario() {
     global $tarjetas_tabla, $wpdb;
+    $user = wp_get_current_user();
+    $user_id = $user->ID;
+    $sql = $wpdb->prepare("SELECT cardcode FROM {$tarjetas_tabla} WHERE user_id='{$user_id}' order by `cardModified`");
+    $tarjetas = $wpdb->get_col($sql);
+    return $tarjetas;
+}
+
+function tgc_lista_tarjetas_usuario() {
     if (is_user_logged_in ()) {
-        $user = wp_get_current_user();
-        $user_id = $user->ID;
-        $sql = $wpdb->prepare("SELECT cardcode FROM {$tarjetas_tabla} WHERE user_id='{$user_id}' order by `cardModified`");
-        $tarjetas = $wpdb->get_col($sql);
+        $tarjetas = tgc_tarjetas_usuario();
         if (count($tarjetas) > 0) {
             echo "<ul class='lista_tarjetas'>";
             foreach ($tarjetas as $tarjeta) {
@@ -146,7 +151,7 @@ function tgc_tarjeta_cuentanos() {
 
 function tgc_tarjeta_cuando() {
     global $tarjeta;
-    echo mysql2date(get_option('date_format'),$tarjeta->date);
+    echo mysql2date(get_option('date_format'), $tarjeta->date);
 }
 
 function tgc_tarjeta_donde() {

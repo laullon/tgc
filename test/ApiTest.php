@@ -53,6 +53,7 @@ class ArrayTest extends PHPUnit_Framework_TestCase {
         $res = json_decode($r->getResponseBody());
         $this->assertEquals(200, $r->getResponseCode(), $res);
         $this->assertEquals($login, $res->user_login, $res);
+        return $r->getResponseCookies();
     }
 
     public function testLoginKO() {
@@ -65,6 +66,31 @@ class ArrayTest extends PHPUnit_Framework_TestCase {
 
     public function testLoginNoPost() {
         $r = new HttpRequest("{$this->url}/api/login/", HttpRequest::METH_GET);
+        $r->send();
+        $res = json_decode($r->getResponseBody());
+        $this->assertEquals(500, $r->getResponseCode(), $res);
+    }
+
+    public function testUserInfo() {
+        $cookies = $this->testLogin();
+        foreach ($cookies as $c) {
+            if ($c->path == "/") {
+                foreach ($c->cookies as $c_key => $c_val) {
+                    $cookie[$c_key] = $c_val;
+                }
+            }
+        }
+        $r = new HttpRequest("{$this->url}/api/user/info/", HttpRequest::METH_GET);
+        $r->addCookies($cookie);
+        $r->send();
+        $res = json_decode($r->getResponseBody());
+        $this->assertEquals(200, $r->getResponseCode(), $res);
+        $this->assertEquals(true, is_array($res->tarjetas), "tarjetas");
+        $this->assertEquals(true, is_array($res->historias), "historias");
+    }
+
+    public function testUserInfoKO() {
+        $r = new HttpRequest("{$this->url}/api/user/info/", HttpRequest::METH_GET);
         $r->send();
         $res = json_decode($r->getResponseBody());
         $this->assertEquals(500, $r->getResponseCode(), $res);
