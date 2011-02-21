@@ -7,7 +7,7 @@ add_action('template_redirect', 'tgc_api_template_redirect');
 function tgc_api_rewrite_rules($wp_rewrite) {
     $br = array(
         'api/([^/]*)/([^/]*)' => 'index.php?tgc_api_cmd=$matches[1]&tgc_id=$matches[2]&tgc_api=true',
-        'api/test' => 'index.php?tgc_api_cmd=test&tgc_api=true'
+        'api/([^/]*)' => 'index.php?tgc_api_cmd=$matches[1]&tgc_api=true',
     );
     $wp_rewrite->rules = $br + $wp_rewrite->rules;
 }
@@ -29,12 +29,17 @@ function tgc_api_template_redirect() {
 
 function tgc_api_main() {
     global $wp_query;
-    if ($wp_query->query_vars['tgc_api_cmd'] === "tarjeta") {
+    $cmd = $wp_query->query_vars['tgc_api_cmd'];
+    if ($cmd === "tarjeta") {
         tgc_api_cmd_tarjeta();
-    } else if ($wp_query->query_vars['tgc_api_cmd'] === "historia") {
+    } else if ($cmd === "historia") {
         tgc_api_cmd_historia();
-    } else if ($wp_query->query_vars['tgc_api_cmd'] === "test") {
+    } else if ($cmd === "test") {
         tgc_api_cmd_test();
+    } else if ($cmd === "login") {
+        tgc_api_cmd_login();
+    } else {
+        sendResponse(500, "cmd='{$cmd}'");
     }
 }
 
@@ -63,6 +68,24 @@ function tgc_api_cmd_historia() {
 
 function tgc_api_cmd_test() {
     sendResponse(200, "test ok");
+}
+
+function tgc_api_cmd_login() {
+    if (isset($_POST)) {
+        $creds = array();
+        $creds['user_login'] = $_POST['user'];
+        $creds['user_password'] = $_POST['pass'];
+        $creds['remember'] = false;
+        $user = wp_signon($creds, false);
+        if (is_wp_error($user)) {
+            $err = preg_replace("#(<[^>]*>)#", "", $user->get_error_message());
+            sendResponse(500, $err);
+        } else {
+            sendResponse(200, array("id" => $user->data->ID,"user_login" => $user->data->user_login));
+        }
+    } else {
+        sendResponse(500, "solo POST");
+    }
 }
 
 function sendResponse($status = 200, $body = '', $content_type = 'text/html') {
