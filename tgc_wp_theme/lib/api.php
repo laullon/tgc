@@ -60,11 +60,23 @@ function tgc_api_cmd_tarjeta() {
 function tgc_api_cmd_historia() {
     global $wp_query;
     $h_id = $wp_query->query_vars['tgc_id'];
-    $h = get_post($h_id);
-    if (isset($h)) {
-        sendResponse(200, $h);
+    if (is_numeric($h_id)) {
+        $h = get_post($h_id);
+        if (isset($h)) {
+            sendResponse(200, $h);
+        } else {
+            sendResponse(404, "Historia no valida");
+        }
+    } else if ($h_id == "nueva") {
+        if (isset($_POST)) {
+            extract($_POST);
+            $h_id = tgc_crear_historia($tarjeta, $historia, $fecha, $lugar);
+            sendResponse(200, $h_id);
+        } else {
+            sendResponse(500, "solo POST");
+        }
     } else {
-        sendResponse(404, "Historia no valida");
+        sendResponse(500, "Error '{$$h_id}'");
     }
 }
 
@@ -94,11 +106,11 @@ function tgc_api_cmd_user() {
     global $wp_query;
     $acction = $wp_query->query_vars['tgc_id']; /// XXX igual no lo necesito
     if ($acction === "info") {
-        if(is_user_logged_in ()){
-            $user_info->tarjetas=tgc_tarjetas_usuario();
-            $user_info->historias=tgc_historias_usuario();
+        if (is_user_logged_in ()) {
+            $user_info->tarjetas = tgc_tarjetas_usuario();
+            $user_info->historias = tgc_historias_usuario();
             sendResponse(200, $user_info);
-        }else{
+        } else {
             sendResponse(500, "Error: Sesion caducada");
         }
     } else {

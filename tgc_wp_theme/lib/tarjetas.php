@@ -53,53 +53,57 @@ function tgc_lista_tarjetas_usuario() {
     }
 }
 
-function tgc_guardar_historia() {
-    global $tgc_tarjeta, $tarjetas_tabla, $wpdb;
+function tgc_crear_historia($tarjeta, $historia, $fecha, $lugar) {
+    global $tarjetas_tabla,$wpdb;
 
+    $user_id = tgc_get_user_id();
+
+    $post_id = wp_insert_post(array(
+                'post_author' => $user_id,
+                'post_title' => "Historia",
+                'post_content' => $historia,
+                'post_category' => array(get_cat_ID('Historias')),
+                'post_status' => 'publish'
+            ));
+    wp_update_post(array(
+        'ID' => $post_id,
+        'post_title' => "Historia " . $post_id));
+    add_post_meta($post_id, "tarjeta", $tarjeta, TRUE);
+    add_post_meta($post_id, "fecha", $fecha, TRUE);
+    add_post_meta($post_id, "lugar", $lugar, TRUE);
+
+    $sql = $wpdb->prepare("UPDATE {$tarjetas_tabla} SET cardModified=NOW() WHERE cardCode='{$tarjeta}'");
+    $wpdb->query($sql);
+
+    return $post_id;
+}
+
+function tgc_get_user_id() {
     require_once( ABSPATH . WPINC . '/ms-functions.php');
-//    if ($_POST['login'] == "regitrado") {
-//        if (is_user_logged_in ()) {
-//            $user = wp_get_current_user();
-//            $user_id = $user->ID;
-//        } else {
-//            global $wp_actions;
-//            $user = wp_signon(array("user_login" => $_POST['log'], 'user_password' => $_POST['pwd']));
-//            if (!is_wp_error($user)) {
-//                $user_id = $user->ID;
-//            }
-//        }
-//    } else if ($_POST['login'] == "anonimo") {
-//        $user_id = get_user_id_from_string('anonimo');
-//    }
-
     if (is_user_logged_in ()) {
         $user = wp_get_current_user();
         $user_id = $user->ID;
     } else {
         $user_id = get_user_id_from_string('anonimo');
     }
+    return $user_id;
+}
+
+function tgc_guardar_historia() {
+    global $tgc_tarjeta, $tarjetas_tabla, $wpdb;
 
     if ($_POST['tgc_story']) {
         list($d, $m, $y) = explode('/', $_POST['tgc_date']);
-        $post_id = wp_insert_post(array(
-                    'post_author' => $user_id,
-                    'post_title' => "Historia",
-                    'post_content' => $_POST['tgc_story'],
-                    'post_category' => array(get_cat_ID('Historias')),
-                    'post_status' => 'publish'
-                ));
-        wp_update_post(array(
-            'ID' => $post_id,
-            'post_title' => "Historia " . $post_id));
-        add_post_meta($post_id, "tarjeta", $tgc_tarjeta, TRUE);
-        add_post_meta($post_id, "fecha", "{$y}-{$m}-{$d} 00:00:00", TRUE);
-        add_post_meta($post_id, "lugar", $_POST['tgc_place'], TRUE);
+        $fecha = "{$y}-{$m}-{$d} 00:00:00";
+        $historia = $_POST['tgc_story'];
+        $lugar = $_POST['tgc_place'];
 
-        $sql = $wpdb->prepare("UPDATE {$tarjetas_tabla} SET cardModified=NOW() WHERE cardCode='{$tgc_tarjeta}'");
-        $wpdb->query($sql);
+        $post_id = tgc_crear_historia($tgc_tarjeta, $historia, $fecha, $lugar);
+
         wp_redirect("/historia/{$post_id}/gracias/");
         die;
     } else if ($_POST['tgc_cuentanos']) {
+        $user_id = tgc_get_user_id();
         $cuentanos = $_POST['tgc_cuentanos'];
         $date = $_POST['tgc_date'];
         $lugar = $_POST['tgc_place'];
