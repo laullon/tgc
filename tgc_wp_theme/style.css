@@ -380,17 +380,19 @@ div.der {
     float: right;
 }
 
-#menu-footer{
+#menu-footer,
+#menu-idioma{
     float: right;
 }
 
-#menu-footer h1 {
+#menu-footer h1{
     font-size: 1.5em;
     float: left;
     margin: 0 10px 0 0;
 }
 
-#menu-footer ul li {
+#menu-footer ul li,
+#menu-idioma ul li{
     display: inline;
     list-style-type: none;
     padding-top: 10px;
@@ -401,7 +403,8 @@ div.der {
     padding-top: 5px;
 }
 
-#menu-footer ul li a {
+#menu-footer ul li a,
+#menu-idioma ul li a{
     text-decoration: none;
     color: #175451;
     font-size: 16px;
@@ -409,7 +412,8 @@ div.der {
     border-left: 1px solid #175451;
     padding-left: 5px;
 }
-#menu-footer ul li:first-child a {
+#menu-footer ul li:first-child a,
+#menu-idioma ul li:first-child a{
     text-decoration: none;
     color: #175451;
     font-size: 16px;

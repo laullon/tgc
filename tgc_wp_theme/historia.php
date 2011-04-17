@@ -4,7 +4,7 @@ $fecha = get_post_meta($post->ID, 'fecha', true);
 if($fecha){
     $fecha=mysql2date(get_option('date_format'), $fecha);
 }else{
-    $fecha=get_the_date();
+    $fecha=qtrans_formatPostDateTime(get_option('date_format'));
 }
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class("historia seccion"); ?>>

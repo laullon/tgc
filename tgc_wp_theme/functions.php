@@ -70,4 +70,16 @@ function tgc_about() {
         echo '</div>';
     }
 }
+
+function tgc_trozo($trozo) {
+    $l = "es";
+    if (function_exists("qtrans_getLanguage")) {
+        $l = qtrans_getLanguage();
+    }
+
+    $templates[]="trozos/${trozo}_{$l}.php";
+    $templates[]="trozos/${trozo}.php";
+    locate_template($templates, true, false);
+}
+
 ?>
