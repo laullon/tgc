@@ -5,7 +5,7 @@
             <?php tgc_trozo("home_1") ?>
             <input type="textbox" name="tarjeta"/>
             <a id="tarjeta" class="ir" href="/tarjeta/">ir &gt;</a>
-            <?php tgc_trozo("home_noti") ?>
+            <?php //tgc_trozo("home_noti") ?>
         </div>
         <div id="portada" class="der">
             <?php if (!is_user_logged_in()) : ?>
