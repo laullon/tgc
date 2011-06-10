@@ -4,6 +4,8 @@ define(BBDD_VERISON, "1.1");
 require_once 'lib/tarjetas.php';
 require_once 'lib/widgets.php';
 require_once 'lib/historias.php';
+require_once 'lib/captcha.php';
+require_once 'lib/wp_error_log.php';
 
 function register_my_menus() {
     register_nav_menus(
@@ -38,6 +40,7 @@ function tgc_rewrite_rules($wp_rewrite) {
     $br2 = array('tarjeta/(.*)$' => 'index.php?tgc_tarjeta=$matches[1]');
     $br3 = array('historia/(\d*)/gracias$' => 'index.php?p=$matches[1]&tgc_gracias=true');
     $br4 = array('historia/(\d*)$' => 'index.php?p=$matches[1]');
+    $br4 = array('captcha/(\d*)$' => 'index.php?tgc_captcha=TRUE');
     $wp_rewrite->rules = $br1 + $br2 + $br3 + $br4 + $wp_rewrite->rules;
 }
 
@@ -46,6 +49,7 @@ add_filter('query_vars', 'tgc_query_vars');
 function tgc_query_vars($vars) {
     $vars[] = 'tgc_tarjeta';
     $vars[] = 'tgc_gracias';
+    $vars[] = 'tgc_captcha';
     return $vars;
 }
 
@@ -55,6 +59,9 @@ function tgc_template_redirect() {
     global $wp_query;
     if (isset($wp_query->query_vars['tgc_tarjeta'])) {
         tarjetas();
+    } else if (isset($wp_query->query_vars['tgc_captcha'])) {
+        tgc_SimpleCaptcha_image();
+        die;
     }
 }
 

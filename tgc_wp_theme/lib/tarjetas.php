@@ -3,7 +3,7 @@
 function tarjetas() {
     global $wp_query, $tarjeta;
     $GLOBALS['tgc_tarjeta'] = $wp_query->query_vars['tgc_tarjeta'];
-    $gracias=$wp_query->query_vars['tgc_gracias']=="true";
+    $gracias = $wp_query->query_vars['tgc_gracias'] == "true";
     tgc_guardar_historia();
     if (tgc_es_tarjeta_valida ()) {
         if ($tarjeta->activa && !$gracias) {
@@ -60,11 +60,18 @@ function tgc_guardar_historia() {
 //    } else if ($_POST['login'] == "anonimo") {
 //        $user_id = get_user_id_from_string('anonimo');
 //    }
+    session_start();
 
     if (is_user_logged_in ()) {
         $user = wp_get_current_user();
         $user_id = $user->ID;
     } else {
+        if ($_POST['tgc_story']) {
+            if (empty($_SESSION['captcha']) || (strtolower(trim($_REQUEST['captcha'])) != $_SESSION['captcha'])) {
+                wp_redirect("/tarjeta/{$tgc_tarjeta}/?error=true");
+                die;
+            }
+        }
         $user_id = get_user_id_from_string('anonimo');
     }
 
@@ -135,7 +142,7 @@ function tgc_tarjeta_cuentanos() {
 
 function tgc_tarjeta_cuando() {
     global $tarjeta;
-    echo mysql2date(get_option('date_format'),$tarjeta->date);
+    echo mysql2date(get_option('date_format'), $tarjeta->date);
 }
 
 function tgc_tarjeta_donde() {
