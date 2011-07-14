@@ -34,10 +34,11 @@
                             <input type="text" id="tgc_place" name="tgc_place" value="<?php echo $_POST['tgc_place'] ?>"/>
                         </div>
                     </div>
-                    <div id="historia">
+                    <div class="seccion clearfix" id="historia">
                         <label for="tgc_story">Cómo ha sido</label>
                         <textarea id="tgc_story" name="tgc_story" rows="3" cols="40"><?php echo $_POST['tgc_story'] ?></textarea>
                     </div>
+                    <?php tgc_SimpleCaptcha() ?>
                 </div>
                 <input type="submit" value="Agregar"/>
             </form>

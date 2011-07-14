@@ -80,10 +80,17 @@ function tgc_crear_historia($tarjeta, $historia, $fecha, $lugar) {
 
 function tgc_get_user_id() {
     require_once( ABSPATH . WPINC . '/ms-functions.php');
+    session_start();
     if (is_user_logged_in ()) {
         $user = wp_get_current_user();
         $user_id = $user->ID;
     } else {
+        if ($_POST['tgc_story']) {
+            if (empty($_SESSION['captcha']) || (strtolower(trim($_REQUEST['captcha'])) != $_SESSION['captcha'])) {
+                wp_redirect("/tarjeta/{$tgc_tarjeta}/?error=true");
+                die;
+            }
+        }
         $user_id = get_user_id_from_string('anonimo');
     }
     return $user_id;
